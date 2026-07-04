@@ -2,11 +2,11 @@ const sidebar = document.getElementById("sidebar");
 const popup = document.getElementById("popup");
 const popupContent = document.getElementById("popup-content");
 
-function toggleMenu() {
+function toggleMenu(){
     sidebar.classList.toggle("active");
 }
 
-function closePopup() {
+function closePopup(){
     popup.style.display = "none";
 }
 
@@ -18,130 +18,165 @@ window.onclick = function(e){
 
 function showContent(type){
 
-let html = "";
+    sidebar.classList.remove("active");
 
-switch(type){
+    let html = "";
 
-case "about":
-html = `
-<h2>📄 النبذة التعريفية</h2>
-<p style="direction:rtl;text-align:right;line-height:2;">
-مسئول مشتريات يمتلك مهارات قوية في التفاوض وإدارة الموردين، مع خبرة في توفير احتياجات الشركة بأفضل جودة وأقل تكلفة، والقدرة على متابعة المخزون وتنظيم عمليات الشراء بكفاءة عالية.
-</p>
-`;
-break;
+    switch(type){
 
-case "qualification":
-html = `
-<h2>🎓 المؤهلات العلمية</h2>
+        case "about":
 
-<ul style="direction:rtl;text-align:right;line-height:2;">
-<li>2017 - 2021 : جامعة الزقازيق — ليسانس حقوق.</li>
-<li>2021 - 2022 : نقابة المحامين بالشرقية — دبلومة الإدارة القانونية للشركات.</li>
-</ul>
-`;
-break;
+        html = `
+        <h2>📄 النبذة التعريفية</h2>
 
-case "experience":
-html = `
-<h2>💼 الخبرات العملية</h2>
+        <p>
+        مسئول مشتريات يمتلك مهارات قوية في التفاوض وإدارة الموردين، مع خبرة في توفير احتياجات الشركة بأفضل جودة وأقل تكلفة، والقدرة على متابعة المخزون وتنظيم عمليات الشراء بكفاءة عالية.
+        </p>
+        `;
+        break;
 
-<div style="direction:rtl;text-align:right;line-height:2;">
+        case "contact":
 
-<h3>مجموعة شركات النجم الذهبي (2023 - 2025)</h3>
+        html = `
+        <h2>📞 معلومات الاتصال</h2>
 
-<ul>
-<li>مدير مشتريات.</li>
-<li>البحث عن الموردين والتعامل معهم.</li>
-<li>مقارنة الأسعار والعروض.</li>
-<li>التفاوض على الأسعار وشروط الدفع والتوريد.</li>
-<li>إصدار أوامر الشراء.</li>
-<li>التأكد من مطابقة المنتجات للمواصفات.</li>
-</ul>
+        <p><b>رقم الهاتف:</b> +966565120349</p>
 
-<hr>
+        <p><b>البريد الإلكتروني:</b><br>
+        Abdallahelshahat027@gmail.com</p>
 
-<h3>شركة أستر (2025 - 2026)</h3>
+        <p><b>العنوان:</b><br>
+        المملكة العربية السعودية - الرياض</p>
+        `;
+        break;
 
-<ul>
-<li>مسئول مشتريات.</li>
-<li>متابعة المخزون.</li>
-<li>التنسيق مع الإدارات.</li>
-<li>عمل تقارير المشتريات.</li>
-<li>متابعة العقود والفواتير.</li>
-<li>تقليل التكاليف مع الحفاظ على الجودة.</li>
-</ul>
+        case "languages":
 
-</div>
-`;
-break;
+        html = `
+        <h2>🌍 اللغات</h2>
 
-case "skills":
-html = `
-<h2>💼 المهارات الاحترافية</h2>
+        <ul>
+        <li>اللغة العربية : 100%</li>
+        <li>اللغة الإنجليزية : 70%</li>
+        </ul>
+        `;
+        break;
 
-<ul style="direction:rtl;text-align:right;line-height:2;">
-<li>الإشراف على العمال</li>
-<li>الإدارة الفعالة</li>
-<li>إدارة المصانع</li>
-<li>Zoho ERP</li>
-<li>Odoo ERP</li>
-<li>Oracle ERP</li>
-</ul>
-`;
-break;
+        case "hobbies":
 
-case "languages":
-html = `
-<h2>🌍 اللغات</h2>
+        html = `
+        <h2>📚 الهوايات</h2>
 
-<ul style="direction:rtl;text-align:right;line-height:2;">
-<li>العربية : 100%</li>
-<li>الإنجليزية : 70%</li>
-</ul>
-`;
-break;
+        <ul>
+        <li>القراءة</li>
+        <li>التعليم المستمر</li>
+        </ul>
+        `;
+        break;
 
-case "hobbies":
-html = `
-<h2>📚 الهوايات</h2>
+        case "extra":
 
-<ul style="direction:rtl;text-align:right;line-height:2;">
-<li>القراءة</li>
-<li>التعليم المستمر</li>
-</ul>
-`;
-break;
+        html = `
+        <h2>⭐ لمحة إضافية</h2>
 
-case "extra":
-html = `
-<h2>⭐ لمحة إضافية</h2>
+        <p>
 
-<p style="direction:rtl;text-align:right;line-height:2;">
-مسئول مشتريات محترف يمتلك خبرة في إدارة عمليات الشراء والتوريد بكفاءة عالية، مع قدرة متميزة على التفاوض وبناء علاقات قوية مع الموردين لتحقيق أفضل جودة بأقل التكاليف، ويتمتع بمهارات تحليلية وتنظيمية قوية.
-</p>
-`;
-break;
+مسئول مشتريات محترف يمتلك خبرة في إدارة عمليات الشراء والتوريد بكفاءة عالية، مع قدرة متميزة على التفاوض وبناء علاقات قوية مع الموردين لتحقيق أفضل جودة بأقل التكاليف.
 
-case "contact":
-html = `
-<h2>📞 معلومات الاتصال</h2>
+<br><br>
 
-<ul style="direction:rtl;text-align:right;line-height:2;">
-<li>📱 +966565120349</li>
-<li>📧 Abdallahelshahat027@gmail.com</li>
-<li>📍 المملكة العربية السعودية - الرياض</li>
-</ul>
-`;
-break;
+يتمتع بمهارات تحليلية وتنظيمية قوية، وخبرة في متابعة المخزون وإدارة العقود وضمان استمرارية التوريد وفق أعلى معايير الجودة والالتزام.
 
-default:
-html = "<h2>لا توجد بيانات</h2>";
+        </p>
+        `;
+        break;        case "qualification":
 
-}
+        html = `
+        <h2>🎓 المؤهلات العلمية</h2>
 
-popupContent.innerHTML = html;
-popup.style.display = "flex";
-sidebar.classList.remove("active");
+        <ul>
+
+        <li>2017 - 2021 : جامعة الزقازيق — ليسانس حقوق.</li>
+
+        <li>2021 - 2022 : نقابة المحامين بالشرقية — دبلومة الإدارة القانونية للشركات.</li>
+
+        </ul>
+        `;
+        break;
+
+        case "experience":
+
+        html = `
+        <h2>💼 الخبرات العملية</h2>
+
+        <h3>مجموعة شركات النجم الذهبي (2023 - 2025)</h3>
+
+        <p><b>المسمى الوظيفي:</b> مدير مشتريات</p>
+
+        <ul>
+
+        <li>البحث عن الموردين والتعامل معهم.</li>
+
+        <li>مقارنة الأسعار والعروض واختيار الأفضل.</li>
+
+        <li>التفاوض على الأسعار وشروط الدفع والتوريد.</li>
+
+        <li>إصدار أوامر الشراء ومتابعتها.</li>
+
+        <li>التأكد من مطابقة الخامات والمنتجات للمواصفات.</li>
+
+        </ul>
+
+        <hr>
+
+        <h3>شركة أستر (2025 - 2026)</h3>
+
+        <p><b>المسمى الوظيفي:</b> مسئول مشتريات</p>
+
+        <ul>
+
+        <li>متابعة المخزون وتحديد الاحتياجات.</li>
+
+        <li>التنسيق مع المخازن والحسابات والإدارات الأخرى.</li>
+
+        <li>إعداد تقارير المصروفات والمشتريات.</li>
+
+        <li>متابعة العقود والفواتير.</li>
+
+        <li>حل مشاكل التأخير أو نقص التوريد.</li>
+
+        <li>تقليل التكاليف مع الحفاظ على الجودة.</li>
+
+        </ul>
+        `;
+        break;
+
+        case "skills":
+
+        html = `
+        <h2>⭐ المهارات الاحترافية</h2>
+
+        <ul>
+
+        <li>الإشراف على العمال</li>
+
+        <li>الإدارة الفعالة</li>
+
+        <li>إدارة المصانع</li>
+
+        <li>Zoho ERP</li>
+
+        <li>Odoo ERP</li>
+
+        <li>Oracle ERP</li>
+
+        </ul>
+        `;
+        break;
+
+    }
+
+    popupContent.innerHTML = html;
+    popup.style.display = "flex";
 
 }
