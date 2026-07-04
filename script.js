@@ -1,63 +1,207 @@
-/* Cursor Glow */
+const sidebar = document.getElementById("sidebar");
+const popup = document.getElementById("popup");
+const popupContent = document.getElementById("popup-content");
 
-const cursor=document.createElement("div");
+function toggleMenu(){
+    sidebar.classList.toggle("active");
+}
 
-cursor.style.width="18px";
-cursor.style.height="18px";
-cursor.style.border="2px solid #00c6ff";
-cursor.style.borderRadius="50%";
-cursor.style.position="fixed";
-cursor.style.pointerEvents="none";
-cursor.style.transition=".08s";
-cursor.style.zIndex="999999";
+function closePopup(){
+    popup.style.display="none";
+}
 
-document.body.appendChild(cursor);
+window.onclick=function(e){
+    if(e.target===popup){
+        closePopup();
+    }
+}
 
-document.addEventListener("mousemove",e=>{
+function showContent(type){
 
-cursor.style.left=e.clientX-9+"px";
-cursor.style.top=e.clientY-9+"px";
+sidebar.classList.remove("active");
 
-});
+let html="";
 
-/* Parallax */
+switch(type){
 
-document.addEventListener("mousemove",e=>{
+case "about":
 
-const hero=document.querySelector(".hero");
+html=`
 
-let x=(e.clientX/window.innerWidth)*20;
+<h2>📄 النبذة التعريفية</h2>
 
-let y=(e.clientY/window.innerHeight)*20;
+<p style="line-height:2;font-size:20px;direction:rtl;text-align:right;">
 
-hero.style.backgroundPosition=`${50+x/3}% ${50+y/3}%`;
+مسئول مشتريات يمتلك مهارات قوية في التفاوض وإدارة الموردين، مع خبرة في توفير احتياجات الشركة بأفضل جودة وأقل تكلفة، والقدرة على متابعة المخزون وتنظيم عمليات الشراء بكفاءة عالية.
 
-});/* Loading */
+</p>
 
-window.onload=function(){
+`;
 
-setTimeout(()=>{
+break;
 
-document.getElementById("loader").style.opacity="0";
+case "contact":
 
-setTimeout(()=>{
+html=`
 
-document.getElementById("loader").style.display="none";
+<h2>📞 معلومات الاتصال</h2>
 
-},1000);
+<div style="direction:rtl;text-align:right;line-height:2;font-size:20px;">
 
-},1500);
+<p><b>رقم الهاتف :</b> +966565120349</p>
+
+<p><b>البريد الإلكتروني :</b> Abdallahelshahat027@gmail.com</p>
+
+<p><b>العنوان :</b> المملكة العربية السعودية - الرياض</p>
+
+</div>
+
+`;
+
+break;
+
+case "languages":
+
+html=`
+
+<h2>🌍 اللغات</h2>
+
+<ul style="direction:rtl;text-align:right;font-size:20px;line-height:2;">
+
+<li>اللغة العربية : 100%</li>
+
+<li>اللغة الإنجليزية : 70%</li>
+
+</ul>
+
+`;
+
+break;
+
+case "hobbies":
+
+html=`
+
+<h2>📚 الهوايات</h2>
+
+<ul style="direction:rtl;text-align:right;font-size:20px;line-height:2;">
+
+<li>القراءة</li>
+
+<li>التعليم المستمر</li>
+
+</ul>
+
+`;
+
+break;
+
+case "extra":
+
+html=`
+
+<h2>⭐ لمحة إضافية</h2>
+
+<p style="direction:rtl;text-align:right;font-size:20px;line-height:2;">
+
+مسئول مشتريات محترف يمتلك خبرة في إدارة عمليات الشراء والتوريد بكفاءة عالية، مع قدرة متميزة على التفاوض وبناء علاقات قوية مع الموردين لتحقيق أفضل جودة بأقل التكاليف.
+
+يتمتع بمهارات تحليلية وتنظيمية قوية، وخبرة في متابعة المخزون وإدارة العقود وضمان استمرارية التوريد وفق أعلى معايير الجودة والالتزام.
+
+</p>
+
+`;
+
+break;
+
+case "qualification":
+
+html=`
+
+<h2>🎓 المؤهلات العلمية</h2>
+
+<div style="direction:rtl;text-align:right;line-height:2;font-size:20px;">
+
+<p>2017 - 2021 : جامعة الزقازيق — ليسانس حقوق.</p>
+
+<p>2021 - 2022 : نقابة المحامين بالشرقية — دبلومة الإدارة القانونية للشركات.</p>
+
+<hr>
+
+<h2>💼 الخبرات العملية</h2>
+
+<h3>مجموعة شركات النجم الذهبي (2023 - 2025)</h3>
+
+<ul>
+
+<li>مدير مشتريات.</li>
+
+<li>البحث عن الموردين والتعامل معهم.</li>
+
+<li>مقارنة الأسعار والعروض.</li>
+
+<li>التفاوض على الأسعار.</li>
+
+<li>إصدار أوامر الشراء.</li>
+
+<li>التأكد من مطابقة المنتجات للمواصفات.</li>
+
+</ul>
+
+<h3>شركة أستر (2025 - 2026)</h3>
+
+<ul>
+
+<li>مسئول مشتريات.</li>
+
+<li>متابعة المخزون.</li>
+
+<li>إعداد تقارير المشتريات.</li>
+
+<li>متابعة العقود والفواتير.</li>
+
+<li>حل مشاكل التأخير.</li>
+
+<li>تقليل التكاليف مع الحفاظ على الجودة.</li>
+
+</ul>
+
+</div>
+
+`;
+
+break;
+
+case "skills":
+
+html=`
+
+<h2>💼 المهارات الاحترافية</h2>
+
+<ul style="direction:rtl;text-align:right;font-size:20px;line-height:2;">
+
+<li>الإشراف على العمال</li>
+
+<li>الإدارة الفعالة</li>
+
+<li>إدارة المصانع</li>
+
+<li>Zoho ERP</li>
+
+<li>Odoo ERP</li>
+
+<li>Oracle ERP</li>
+
+</ul>
+
+`;
+
+break;
 
 }
 
-/* Progress Animation */
+popupContent.innerHTML=html;
 
-function animateBars(){
-
-document.querySelectorAll(".progress div").forEach(bar=>{
-
-bar.style.width=bar.dataset.width;
-
-});
+popup.style.display="flex";
 
 }
