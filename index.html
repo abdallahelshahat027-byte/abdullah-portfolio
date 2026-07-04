@@ -12,18 +12,13 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
 <body>
 
 <div class="hero">
-
-<div class="overlay"></div>
-
-<!-- Navbar -->
 
 <nav>
 
@@ -34,27 +29,56 @@ ABDALLAH
 <div class="top-buttons">
 
 <button onclick="toggleMenu()">
-☰ Menu
+<i class="fa-solid fa-bars"></i>
 </button>
 
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})">
-🏠 Home
+<button onclick="window.location.reload()">
+<i class="fa-solid fa-house"></i>
 </button>
 
 <button onclick="showContent('contact')">
-📞 Contact
+<i class="fa-solid fa-phone"></i>
 </button>
 
 </div>
 
 </nav>
 
-<!-- Sidebar -->
-
 <div id="sidebar">
 
-<h2>القائمة الرئيسية</h2>
+<h2>القائمة</h2>
 
+<button onclick="showContent('about')">📄 النبذة التعريفية</button>
+
+<button onclick="showContent('qualification')">🎓 المؤهلات العلمية</button>
+
+<button onclick="showContent('experience')">💼 الخبرات العملية</button>
+
+<button onclick="showContent('skills')">⭐ المهارات الاحترافية</button>
+
+<button onclick="showContent('languages')">🌍 اللغات</button>
+
+<button onclick="showContent('hobbies')">📚 الهوايات</button>
+
+<button onclick="showContent('extra')">⭐ لمحة إضافية</button>
+
+<button onclick="showContent('contact')">📞 معلومات الاتصال</button>
+
+</div>
+
+<div class="content">
+
+<div class="profile-card">
+
+<img src="profile.jpg" class="profile-img">
+
+<div class="info">
+
+<h1>Welcome To</h1>
+
+<h2>Abdallah Elshahat Portfolio</h2>
+
+<h3>Purchasing Officer</h3>
 <button onclick="showContent('about')">
 📄 النبذة التعريفية
 </button>
@@ -89,70 +113,20 @@ ABDALLAH
 
 </div>
 
-<!-- Main -->
-
-<div class="content">
-
-<div class="profile-card">
-
-<img src="profile.jpg" class="profile-img" alt="Profile">
-
-<div class="info">
-
-<h1>Welcome To</h1>
-
-<h2>Abdallah Elshahat Portfolio</h2>
-
-<h3>Purchasing Officer</h3>
-
-<div class="buttons">
-
-<button onclick="showContent('about')">
-📄 النبذة التعريفية
-</button>
-
-<button onclick="showContent('qualification')">
-🎓 المؤهلات العلمية
-</button>
-
-<button onclick="showContent('experience')">
-💼 الخبرات العملية
-</button>
-
-<button onclick="showContent('skills')">
-⭐ المهارات الاحترافية
-</button><button onclick="showContent('languages')">
-🌍 اللغات
-</button>
-
-<button onclick="showContent('hobbies')">
-📚 الهوايات
-</button>
-
-<button onclick="showContent('extra')">
-⭐ لمحة إضافية
-</button>
-
-<button onclick="showContent('contact')">
-📞 معلومات الاتصال
-</button>
-
 </div>
 
 </div>
 
 </div>
-
-</div>
-
-<!-- Popup -->
 
 <div id="popup">
 
 <div class="popup-box">
 
 <span class="close" onclick="closePopup()">
+
 &times;
+
 </span>
 
 <div id="popup-content">
@@ -174,3 +148,4 @@ Designed By <span>Abdallah Elshahat</span>
 </body>
 
 </html>
+<div class="buttons">
