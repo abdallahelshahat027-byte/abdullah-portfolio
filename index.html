@@ -1,13 +1,15 @@
-٩<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Abdallah Elshahat Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
@@ -32,17 +34,15 @@ ABDALLAH
 <div class="top-buttons">
 
 <button onclick="toggleMenu()">
-<i class="fa-solid fa-bars"></i>
+☰ Menu
 </button>
-<button onclick="showContent('experience')">
-الخبرات العملية
-</button>
-<button onclick="window.location.reload()">
-<i class="fa-solid fa-house"></i>
+
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})">
+🏠 Home
 </button>
 
 <button onclick="showContent('contact')">
-<i class="fa-solid fa-phone"></i>
+📞 Contact
 </button>
 
 </div>
@@ -53,71 +53,91 @@ ABDALLAH
 
 <div id="sidebar">
 
-<h2>القائمة</h2>
+<h2>القائمة الرئيسية</h2>
 
-<button onclick="showContent('about')">📄 النبذة التعريفية</button>
+<button onclick="showContent('about')">
+📄 النبذة التعريفية
+</button>
 
-<button onclick="showContent('qualification')">🎓 المؤهلات العلمية</button>
+<button onclick="showContent('qualification')">
+🎓 المؤهلات العلمية
+</button>
 
-<button onclick="showContent('skills')">💼 المهارات الاحترافية</button>
-
-<button onclick="showContent('languages')">🌍 اللغات</button>
-
-<button onclick="showContent('hobbies')">📚 الهوايات</button>
-
-<button onclick="showContent('extra')">⭐ لمحة إضافية</button>
-
-<button onclick="showContent('contact')">📞 معلومات الاتصال</button>
 <button onclick="showContent('experience')">
 💼 الخبرات العملية
 </button>
+
+<button onclick="showContent('skills')">
+⭐ المهارات الاحترافية
+</button>
+
+<button onclick="showContent('languages')">
+🌍 اللغات
+</button>
+
+<button onclick="showContent('hobbies')">
+📚 الهوايات
+</button>
+
+<button onclick="showContent('extra')">
+⭐ لمحة إضافية
+</button>
+
+<button onclick="showContent('contact')">
+📞 معلومات الاتصال
+</button>
+
 </div>
 
 <!-- Main -->
 
 <div class="content">
 
-<h1>
-Welcome To
-</h1>
+<div class="profile-card">
 
-<h2>
-Abdallah Elshahat Portfolio
-</h2>
+<img src="profile.jpg" class="profile-img" alt="Profile">
 
-<h3>
-Purchasing Officer
-</h3>
+<div class="info">
+
+<h1>Welcome To</h1>
+
+<h2>Abdallah Elshahat Portfolio</h2>
+
+<h3>Purchasing Officer</h3>
 
 <div class="buttons">
 
 <button onclick="showContent('about')">
-النبذة التعريفية
+📄 النبذة التعريفية
 </button>
 
 <button onclick="showContent('qualification')">
-المؤهلات العلمية
+🎓 المؤهلات العلمية
+</button>
+
+<button onclick="showContent('experience')">
+💼 الخبرات العملية
 </button>
 
 <button onclick="showContent('skills')">
-المهارات الاحترافية
-</button>
-
-<button onclick="showContent('languages')">
-اللغات
+⭐ المهارات الاحترافية
+</button><button onclick="showContent('languages')">
+🌍 اللغات
 </button>
 
 <button onclick="showContent('hobbies')">
-الهوايات
+📚 الهوايات
 </button>
 
 <button onclick="showContent('extra')">
-لمحة إضافية
+⭐ لمحة إضافية
 </button>
 
 <button onclick="showContent('contact')">
-معلومات الاتصال
+📞 معلومات الاتصال
 </button>
+
+</div>
 
 </div>
 
@@ -131,11 +151,8 @@ Purchasing Officer
 
 <div class="popup-box">
 
-<span class="close"
-onclick="closePopup()">
-
+<span class="close" onclick="closePopup()">
 &times;
-
 </span>
 
 <div id="popup-content">
@@ -146,7 +163,14 @@ onclick="closePopup()">
 
 </div>
 
+<footer>
+
+Designed By <span>Abdallah Elshahat</span>
+
+</footer>
+
 <script src="script.js"></script>
 
 </body>
+
 </html>
