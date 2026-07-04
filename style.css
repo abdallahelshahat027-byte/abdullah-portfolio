@@ -1,216 +1,169 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Cairo',sans-serif;
-scroll-behavior:smooth;
+/*=========================
+Typing Animation
+=========================*/
+
+.welcome h1{
+overflow:hidden;
+white-space:nowrap;
+border-right:3px solid #00c6ff;
+width:0;
+animation:typing 4s steps(35,end) forwards,
+blink .8s infinite;
 }
 
-body{
-background:#000;
-color:#fff;
-overflow-x:hidden;
-}
-
-header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:rgba(0,0,0,.25);
-backdrop-filter:blur(15px);
-z-index:999;
-}
-
-.logo{
-font-size:28px;
-font-weight:900;
-color:#00cfff;
-}
-
-nav{
-display:flex;
-gap:25px;
-}
-
-nav a{
-text-decoration:none;
-color:white;
-font-size:18px;
-transition:.3s;
-}
-
-nav a:hover{
-color:#00cfff;
-}
-
-.menu{
-display:none;
-font-size:30px;
-cursor:pointer;
-}
-
-.hero{
-position:relative;
-width:100%;
-height:100vh;
-
-/* ضع صورتك هنا */
-background:url("profile.jpg");
-
-background-size:cover;
-
-background-position:center;
-
-background-attachment:fixed;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-}
-
-.overlay{
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-background:rgba(0,0,0,.55);
-
-}
-
-.hero-content{
-
-position:relative;
-
-z-index:2;
-
-width:90%;
-
-max-width:900px;
-
-background:rgba(255,255,255,.08);
-
-backdrop-filter:blur(15px);
-
-padding:50px;
-
-border-radius:30px;
-
-border:1px solid rgba(255,255,255,.15);
-
-box-shadow:0 20px 50px rgba(0,0,0,.5);
-
-animation:fade 1.3s;
-
-}
-
-.hero-content h4{
-
-font-size:28px;
-
-font-weight:300;
-
-}
-
-.hero-content h1{
-
-font-size:65px;
-
-margin:20px 0;
-
-color:#00cfff;
-
-}
-
-.hero-content h2{
-
-font-size:35px;
-
-margin-bottom:20px;
-
-}
-
-.hero-content p{
-
-font-size:20px;
-
-line-height:40px;
-
-margin-bottom:40px;
-
-}
-
-.hero-buttons{
-
-display:flex;
-
-justify-content:center;
-
-gap:20px;
-
-flex-wrap:wrap;
-
-}
-
-.hero-buttons a{
-
-padding:16px 35px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-color:white;
-
-background:rgba(255,255,255,.12);
-
-backdrop-filter:blur(12px);
-
-transition:.4s;
-
-}
-
-.hero-buttons a:hover{
-
-background:#00cfff;
-
-transform:translateY(-6px);
-
-}
-
-@keyframes fade{
+@keyframes typing{
 
 from{
-
-opacity:0;
-
-transform:translateY(50px);
-
+width:0;
 }
 
 to{
+width:100%;
+}
+
+}
+
+@keyframes blink{
+
+50%{
+border-color:transparent;
+}
+
+}
+
+/*=========================
+Parallax
+=========================*/
+
+.hero{
+
+background-attachment:fixed;
+
+}
+
+/*=========================
+Glow Effect
+=========================*/
+
+.main-buttons button{
+
+position:relative;
+overflow:hidden;
+
+}
+
+.main-buttons button::before{
+
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(90deg,transparent,#ffffff55,transparent);
+transition:.7s;
+
+}
+
+.main-buttons button:hover::before{
+
+left:100%;
+
+}
+
+/*=========================
+Scrollbar
+=========================*/
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#00c6ff;
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111;
+
+}
+
+/*=========================
+Popup Animation
+=========================*/
+
+.popup-box{
+
+animation:popup .5s;
+
+}
+
+@keyframes popup{
+
+0%{
+
+opacity:0;
+transform:translateY(80px) scale(.8);
+
+}
+
+100%{
 
 opacity:1;
+transform:translateY(0) scale(1);
+
+}
+
+}
+
+/*=========================
+Floating Animation
+=========================*/
+
+.welcome{
+
+animation:floating 4s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+0%{
 
 transform:translateY(0);
 
 }
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/*=========================
+Glass Effect
+=========================*/
+
+.main-buttons button,
+.nav-buttons button,
+.popup-box,
+#sidebar{
+
+box-shadow:0 0 30px rgba(0,198,255,.25);
 
 }
 
