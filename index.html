@@ -3,22 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>عبدالله فرج</title>
+<title>عبدالله فرج | Portfolio</title>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
 body {
   background: #0f172a;
   color: white;
+  line-height: 1.6;
+}
+
+header {
   text-align: center;
-  padding: 50px;
-  font-family: sans-serif;
+  padding: 60px 20px;
 }
 
 h1 {
   font-size: 40px;
 }
 
-a {
+.btn {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
@@ -27,15 +37,62 @@ a {
   text-decoration: none;
   border-radius: 8px;
 }
+
+/* sections */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* animation */
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
 </style>
 </head>
 
 <body>
 
-<h1>🔥 عبدالله فرج</h1>
-<p>Frontend Developer</p>
+<header>
+  <h1>🔥 عبدالله فرج</h1>
+  <p>Frontend Developer</p>
+  <a href="https://wa.me/966565120349" class="btn">تواصل واتساب</a>
+</header>
 
-<a href="#">تواصل معي</a>
+<section>
+  <h2>👤 عني</h2>
+  <div class="card">
+    <p>أنا مطور واجهات أمامية بحب أصمم مواقع حديثة وسريعة.</p>
+  </div>
+</section>
+
+<section>
+  <h2>🧠 مهاراتي</h2>
+  <div class="card">HTML</div>
+  <div class="card">CSS</div>
+  <div class="card">JavaScript</div>
+</section>
+
+<section>
+  <h2>💼 مشاريعي</h2>
+  <div class="card">مشروع 1</div>
+  <div class="card">مشروع 2</div>
+</section>
+
+<section>
+  <h2>📄 السيرة الذاتية</h2>
+  <a href="#" class="btn">تحميل CV</a>
+</section>
 
 </body>
 </html>
