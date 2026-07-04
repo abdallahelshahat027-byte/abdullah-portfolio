@@ -32,4 +32,32 @@ let y=(e.clientY/window.innerHeight)*20;
 
 hero.style.backgroundPosition=`${50+x/3}% ${50+y/3}%`;
 
+});/* Loading */
+
+window.onload=function(){
+
+setTimeout(()=>{
+
+document.getElementById("loader").style.opacity="0";
+
+setTimeout(()=>{
+
+document.getElementById("loader").style.display="none";
+
+},1000);
+
+},1500);
+
+}
+
+/* Progress Animation */
+
+function animateBars(){
+
+document.querySelectorAll(".progress div").forEach(bar=>{
+
+bar.style.width=bar.dataset.width;
+
 });
+
+}
