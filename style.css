@@ -1,265 +1,269 @@
-/*=========================
-Typing Animation
-=========================*/
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
 
-.welcome h1{
+body{
 overflow:hidden;
-white-space:nowrap;
-border-right:3px solid #00c6ff;
-width:0;
-animation:typing 4s steps(35,end) forwards,
-blink .8s infinite;
+background:#000;
 }
-
-@keyframes typing{
-
-from{
-width:0;
-}
-
-to{
-width:100%;
-}
-
-}
-
-@keyframes blink{
-
-50%{
-border-color:transparent;
-}
-
-}
-
-/*=========================
-Parallax
-=========================*/
 
 .hero{
-
-background-attachment:fixed;
-
-}
-
-/*=========================
-Glow Effect
-=========================*/
-
-.main-buttons button{
-
 position:relative;
-overflow:hidden;
-
+width:100%;
+height:100vh;
+background:url("profile.jpg") center center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
-.main-buttons button::before{
-
-content:"";
+.overlay{
 position:absolute;
 top:0;
-left:-100%;
+left:0;
 width:100%;
 height:100%;
-background:linear-gradient(90deg,transparent,#ffffff55,transparent);
-transition:.7s;
-
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(2px);
 }
 
-.main-buttons button:hover::before{
-
-left:100%;
-
+nav{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:100;
 }
 
-/*=========================
-Scrollbar
-=========================*/
-
-::-webkit-scrollbar{
-
-width:8px;
-
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#fff;
+letter-spacing:3px;
 }
 
-::-webkit-scrollbar-thumb{
+.top-buttons button{
+width:50px;
+height:50px;
+margin-left:10px;
+border:none;
+border-radius:50%;
+cursor:pointer;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(15px);
+color:#fff;
+font-size:20px;
+transition:.4s;
+}
 
+.top-buttons button:hover{
 background:#00c6ff;
-border-radius:20px;
-
+transform:translateY(-5px);
+box-shadow:0 0 20px #00c6ff;
 }
 
-::-webkit-scrollbar-track{
-
-background:#111;
-
+.content{
+position:relative;
+z-index:10;
+text-align:center;
+color:#fff;
+width:90%;
 }
 
-/*=========================
-Popup Animation
-=========================*/
-
-.popup-box{
-
-animation:popup .5s;
-
+.content h1{
+font-size:55px;
+animation:fade 1s;
 }
 
-@keyframes popup{
-
-0%{
-
-opacity:0;
-transform:translateY(80px) scale(.8);
-
+.content h2{
+font-size:45px;
+margin-top:10px;
+color:#00c6ff;
+animation:fade 1.5s;
 }
 
-100%{
-
-opacity:1;
-transform:translateY(0) scale(1);
-
+.content h3{
+margin-top:15px;
+font-size:28px;
+font-weight:300;
+animation:fade 2s;
 }
 
+.buttons{
+margin-top:40px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
 }
 
-/*=========================
-Floating Animation
-=========================*/
-
-.welcome{
-
-animation:floating 4s ease-in-out infinite;
-
+.buttons button{
+padding:15px 28px;
+border:none;
+border-radius:35px;
+cursor:pointer;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(20px);
+color:white;
+font-size:17px;
+transition:.4s;
 }
 
-@keyframes floating{
-
-0%{
-
-transform:translateY(0);
-
+.buttons button:hover{
+background:#00c6ff;
+transform:scale(1.07);
+box-shadow:0 0 20px #00c6ff;
 }
 
-50%{
-
-transform:translateY(-12px);
-
-}
-
-100%{
-
-transform:translateY(0);
-
-}
-
-}
-
-/*=========================
-Glass Effect
-=========================*/
-
-.main-buttons button,
-.nav-buttons button,
-.popup-box,
 #sidebar{
-
-box-shadow:0 0 30px rgba(0,198,255,.25);
-
+position:fixed;
+top:0;
+right:-320px;
+width:320px;
+height:100%;
+background:rgba(10,10,10,.95);
+backdrop-filter:blur(20px);
+padding:30px;
+transition:.5s;
+z-index:500;
+overflow:auto;
 }
-/* =========================
-   Loading Screen
-========================= */
 
-#loader{
+#sidebar.active{
+right:0;
+}
+
+#sidebar h2{
+color:#00c6ff;
+margin-bottom:20px;
+text-align:center;
+}
+
+#sidebar button{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:12px;
+cursor:pointer;
+background:#222;
+color:white;
+font-size:18px;
+transition:.3s;
+}
+
+#sidebar button:hover{
+background:#00c6ff;
+}
+
+#popup{
+display:none;
+justify-content:center;
+align-items:center;
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:#000;
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:999999;
-transition:1s;
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(5px);
+z-index:999;
 }
 
-.loader-circle{
-width:90px;
-height:90px;
-border:6px solid rgba(255,255,255,.2);
-border-top:6px solid #00c6ff;
-border-radius:50%;
-animation:spin 1s linear infinite;
+.popup-box{
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(20px);
+width:90%;
+max-width:800px;
+max-height:85vh;
+overflow:auto;
+padding:30px;
+border-radius:20px;
+color:white;
+animation:popup .4s;
 }
 
-@keyframes spin{
-
-100%{
-
-transform:rotate(360deg);
-
-}
-
-}
-
-/*=========================
-Progress Bars
-=========================*/
-
-.skill{
-
-margin:20px 0;
-
-}
-
-.skill span{
-
-display:block;
-margin-bottom:8px;
-font-size:18px;
-
-}
-
-.progress{
-
-width:100%;
-height:12px;
-background:#333;
-border-radius:30px;
-overflow:hidden;
-
-}
-
-.progress div{
-
-height:100%;
-width:0;
-background:#00c6ff;
-border-radius:30px;
-transition:2s;
-
-}
-
-/*=========================
-Footer
-=========================*/
-
-footer{
-
-position:absolute;
-bottom:20px;
-left:50%;
-transform:translateX(-50%);
-color:#fff;
-font-size:14px;
-letter-spacing:2px;
-z-index:10;
-
-}
-
-footer span{
-
+.popup-box h2{
+margin-bottom:20px;
 color:#00c6ff;
+}
+
+.popup-box ul{
+padding-right:20px;
+}
+
+.popup-box li{
+margin:10px 0;
+}
+
+.close{
+float:left;
+font-size:35px;
+cursor:pointer;
+}
+
+.close:hover{
+color:red;
+}
+
+@keyframes popup{
+from{
+transform:scale(.7);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@media(max-width:768px){
+
+.content h1{
+font-size:35px;
+}
+
+.content h2{
+font-size:30px;
+}
+
+.content h3{
+font-size:20px;
+}
+
+nav{
+padding:20px;
+}
+
+.logo{
+font-size:20px;
+}
+
+.buttons{
+gap:10px;
+}
+
+.buttons button{
+font-size:15px;
+padding:12px 18px;
+}
 
 }
