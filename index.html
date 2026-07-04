@@ -1,219 +1,331 @@
-٣<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+overflow:hidden;
+background:#000;
+}
+
+/* الخلفية */
+.hero{
+position:relative;
+width:100%;
+height:100vh;
+background:url("profile.jpg") center center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* طبقة شفافة */
+.overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(2px);
+}
+
+/* Navbar */
+
+nav{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+padding:25px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:20;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+letter-spacing:3px;
+color:#fff;
+}
+
+.nav-buttons button{
+width:55px;
+height:55px;
+border-radius:50%;
+border:none;
+margin-left:15px;
+font-size:20px;
+cursor:pointer;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(15px);
+color:#fff;
+transition:.4s;
+}
+
+.nav-buttons button:hover{
+background:#00c6ff;
+transform:translateY(-5px);
+box-shadow:0 0 25px #00c6ff;
+}
+
+/* Sidebar */
+
+#sidebar{
+
+position:fixed;
+top:0;
+right:-340px;
+width:320px;
+height:100%;
+background:rgba(20,20,20,.95);
+backdrop-filter:blur(20px);
+transition:.5s;
+padding:30px;
+z-index:1000;
+overflow:auto;
+
+}
+
+#sidebar.active{
+right:0;
+}
+
+#sidebar h2{
+
+color:#00c6ff;
+margin-bottom:30px;
+
+}
+
+#sidebar button{
 
-<head>
+width:100%;
+padding:16px;
+margin:10px 0;
+border:none;
+border-radius:12px;
+background:rgba(255,255,255,.08);
+color:white;
+font-size:17px;
+cursor:pointer;
+transition:.4s;
+text-align:left;
 
-<meta charset="UTF-8">
+}
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+#sidebar button:hover{
 
-<title>بورتفوليو عبدالله الشحات</title>
+background:#00c6ff;
+padding-left:25px;
 
-<link rel="stylesheet" href="style.css">
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+/* النص */
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+.welcome{
 
-</head>
+position:relative;
+z-index:10;
+text-align:center;
+color:white;
 
-<body>
+}
 
-<header>
+.welcome h1{
 
-<div class="logo">
+font-size:65px;
+font-weight:700;
+animation:fade 1.5s;
 
-عبدالله الشحات
+}
 
-</div>
+.welcome span{
 
-<nav>
+color:#00c6ff;
 
-<a href="#home">الرئيسية</a>
+}
 
-<a href="#about">نبذة</a>
+.welcome h2{
 
-<a href="#education">المؤهلات</a>
+margin-top:15px;
+font-size:28px;
+font-weight:300;
+letter-spacing:2px;
+animation:fade 2s;
 
-<a href="#experience">الخبرات</a>
+}
 
-<a href="#skills">المهارات</a>
+/* Buttons */
 
-<a href="#contact">التواصل</a>
+.main-buttons{
 
-</nav>
+margin-top:45px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:18px;
 
-<div class="menu">
+}
 
-<i class="fa-solid fa-bars"></i>
+.main-buttons button{
 
-</div>
+padding:15px 28px;
+border:none;
+border-radius:40px;
+cursor:pointer;
+font-size:17px;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(15px);
+color:white;
+transition:.4s;
 
-</header>
+}
 
-<section id="home" class="hero">
+.main-buttons button:hover{
 
-<div class="overlay"></div>
+background:#00c6ff;
+transform:scale(1.08);
+box-shadow:0 0 25px #00c6ff;
 
-<div class="hero-content">
+}
 
-<h4>
+/* Popup */
 
-أهلاً بك في
+#popup{
 
-</h4>
+display:none;
+justify-content:center;
+align-items:center;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(8px);
+z-index:3000;
 
-<h1>
+}
 
-بورتفوليو عبدالله الشحات
+.popup-box{
 
-</h1>
+width:80%;
+max-width:850px;
+max-height:80vh;
+overflow:auto;
+padding:35px;
+border-radius:20px;
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(20px);
+color:white;
+animation:zoom .4s;
 
-<h2>
+}
 
-مسئول مشتريات
+.popup-box h2{
 
-</h2>
+margin-bottom:20px;
+color:#00c6ff;
 
-<p>
+}
 
-خبرة في إدارة المشتريات والتفاوض مع الموردين وتحقيق أفضل جودة بأقل تكلفة.
+.popup-box ul{
 
-</p>
+padding-left:25px;
 
-<div class="hero-buttons">
+}
 
-<a href="#about">
+.popup-box li{
 
-نبذة تعريفية
+margin:10px 0;
 
-</a>
+}
 
-<a href="#experience">
+.close{
 
-الخبرات
+float:right;
+font-size:35px;
+cursor:pointer;
+color:white;
 
-</a>
+}
 
-<a href="#contact">
+.close:hover{
 
-تواصل
+color:#00c6ff;
 
-</a>
+}
 
-</div>
+/* Animations */
 
-</div>
+@keyframes fade{
 
-</section>
-<!-- نبذة تعريفية -->
+from{
+opacity:0;
+transform:translateY(40px);
+}
 
-<section id="about" class="section">
+to{
+opacity:1;
+transform:translateY(0);
+}
 
-<div class="container">
+}
 
-<h2>نبذة تعريفية</h2>
+@keyframes zoom{
 
-<p>
+from{
+opacity:0;
+transform:scale(.7);
+}
 
-مسئول مشتريات يمتلك مهارات قوية في التفاوض وإدارة الموردين، مع خبرة في توفير احتياجات الشركة بأفضل جودة وأقل تكلفة، والقدرة على متابعة المخزون وتنظيم عمليات الشراء بكفاءة عالية.
+to{
+opacity:1;
+transform:scale(1);
+}
 
-</p>
+}
 
-</div>
+/* Mobile */
 
-</section>
+@media(max-width:768px){
 
-<!-- المؤهلات -->
+nav{
 
-<section id="education" class="section dark">
+padding:20px;
 
-<div class="container">
+}
 
-<h2>المؤهلات العلمية</h2>
+.logo{
 
-<div class="card">
+font-size:20px;
 
-<h3>2017 - 2021</h3>
+}
 
-<p>جامعة الزقازيق</p>
+.welcome h1{
 
-<span>ليسانس حقوق</span>
+font-size:40px;
 
-</div>
+}
 
-<div class="card">
+.welcome h2{
 
-<h3>2021 - 2022</h3>
+font-size:20px;
 
-<p>نقابة المحامين بالشرقية</p>
+}
 
-<span>دبلومة الإدارة القانونية للشركات</span>
+.main-buttons{
 
-</div>
+padding:0 20px;
 
-</div>
+}
 
-</section>
+.popup-box{
 
-<!-- الخبرات -->
+width:92%;
 
-<section id="experience" class="section">
+}
 
-<div class="container">
-
-<h2>الخبرات العملية</h2>
-
-<div class="timeline">
-
-<div class="item">
-
-<h3>مجموعة شركات النجم الذهبي</h3>
-
-<h4>مدير مشتريات (2023 - 2025)</h4>
-
-<ul>
-
-<li>البحث عن الموردين والتعامل معهم.</li>
-
-<li>مقارنة الأسعار والعروض.</li>
-
-<li>التفاوض على الأسعار.</li>
-
-<li>إصدار أوامر الشراء.</li>
-
-<li>متابعة جودة المنتجات.</li>
-
-</ul>
-
-</div>
-
-<div class="item">
-
-<h3>شركة أستر</h3>
-
-<h4>مسئول مشتريات (2025 - 2026)</h4>
-
-<ul>
-
-<li>متابعة المخزون.</li>
-
-<li>التنسيق مع الإدارات.</li>
-
-<li>تقارير المشتريات.</li>
-
-<li>متابعة العقود.</li>
-
-<li>تقليل التكاليف.</li>
-
-<li>حل مشاكل التوريد.</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
+}
