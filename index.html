@@ -1,55 +1,144 @@
-<div id="exp" class="section">
-  <div class="card">
-    <h2>الخبرات العملية</h2>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بورتفوليو عبدالله الشحات</title>
 
-    <p><b>مجموعة شركات النجم الذهبي (2023 - 2025)</b></p>
-    <p>مدير مشتريات</p>
-    <ul>
-      <li>البحث عن الموردين والتفاوض معهم</li>
-      <li>مقارنة الأسعار واختيار الأفضل</li>
-      <li>إدارة أوامر الشراء</li>
-      <li>التأكد من جودة المنتجات</li>
-    </ul>
+<link rel="stylesheet" href="style.css">
 
-    <br>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <p><b>شركة أستر (2025 - 2026)</b></p>
-    <p>مدير مشتريات</p>
-    <ul>
-      <li>متابعة المخزون وتحديد الاحتياجات</li>
-      <li>التنسيق مع الحسابات والإدارات</li>
-      <li>إعداد تقارير المشتريات</li>
-      <li>إدارة العقود والموردين</li>
-      <li>تقليل التكاليف بدون التأثير على الجودة</li>
-    </ul>
+</head>
 
-  </div>
-</div><div id="edu" class="section">
-  <div class="card">
-    <h2>المؤهلات العلمية</h2>
+<body>
 
-    <p>بكالوريوس حقوق - جامعة الزقازيق (2017 - 2021)</p>
-    <p>دبلومة الإدارة القانونية للشركات - نقابة المحامين</p>
+<div class="overlay"></div>
 
-  </div>
-</div><div id="skills" class="section">
-  <div class="card">
-    <h2>المهارات الاحترافية</h2>
+<header>
 
-    <p>✔ التفاوض مع الموردين</p>
-    <p>✔ إدارة عمليات الشراء</p>
-    <p>✔ تحليل التكاليف</p>
-    <p>✔ إدارة المخزون</p>
-    <p>✔ إعداد التقارير</p>
-
-  </div>
-</div><div id="contact" class="section">
-  <div class="card">
-    <h2>معلومات الاتصال</h2>
-
-    <p>📞 0565120349</p>
-    <p>📧 Abdallahelshahat027@gmail.com</p>
-    <p>📍 الرياض - السعودية</p>
-
-  </div>
+<div class="logo">
+عبدالله الشحات
 </div>
+
+<div class="top-buttons">
+
+<button onclick="toggleMenu()">
+<i class="fas fa-bars"></i>
+</button>
+
+<button onclick="location.reload()">
+<i class="fas fa-house"></i>
+</button>
+
+<button onclick="openPopup('contact')">
+<i class="fas fa-phone"></i>
+</button>
+
+</div>
+
+</header>
+
+<nav id="sidebar">
+
+<h2>القائمة</h2>
+
+<button onclick="openPopup('about')">نبذة تعريفية</button>
+
+<button onclick="openPopup('education')">المؤهلات العلمية</button>
+
+<button onclick="openPopup('experience')">الخبرات العملية</button>
+
+<button onclick="openPopup('skills')">المهارات الاحترافية</button>
+
+<button onclick="openPopup('languages')">اللغات</button>
+
+<button onclick="openPopup('hobbies')">الهوايات</button>
+
+<button onclick="openPopup('extra')">لمحة إضافية</button>
+
+<button onclick="openPopup('contact')">معلومات الاتصال</button>
+
+</nav>
+
+<section class="hero">
+
+<div class="content">
+
+<h1>
+أهلاً بك في بورتفوليو عبدالله الشحات
+</h1>
+
+<h2>
+مسئول مشتريات
+</h2>
+
+<p>
+
+خبرة في إدارة المشتريات والتفاوض مع الموردين وتحقيق أفضل جودة بأقل تكلفة.
+
+</p>
+
+<div class="buttons">
+
+<button onclick="openPopup('about')">
+نبذة تعريفية
+</button>
+
+<button onclick="openPopup('education')">
+المؤهلات
+</button>
+
+<button onclick="openPopup('experience')">
+الخبرات
+</button>
+
+<button onclick="openPopup('skills')">
+المهارات
+</button>
+
+<button onclick="openPopup('languages')">
+اللغات
+</button>
+
+<button onclick="openPopup('hobbies')">
+الهوايات
+</button>
+
+<button onclick="openPopup('extra')">
+لمحة إضافية
+</button>
+
+<button onclick="openPopup('contact')">
+تواصل
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="popup" id="popup">
+
+<div class="popup-box">
+
+<span onclick="closePopup()">
+
+<i class="fas fa-xmark"></i>
+
+</span>
+
+<div id="popupContent">
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
