@@ -1,339 +1,148 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-<footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdallah Elshahat Portfolio</title>
 
-Designed By <span>Abdallah Elshahat</span>
+<link rel="stylesheet" href="style.css">
 
-</footer>
-body{
-overflow:hidden;
-background:#000;
-}
-<div id="loader">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<div class="loader-circle"></div>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="hero">
+
+<div class="overlay"></div>
+
+<!-- Navbar -->
+
+<nav>
+
+<div class="logo">
+ABDALLAH
+</div>
+
+<div class="top-buttons">
+
+<button onclick="toggleMenu()">
+<i class="fa-solid fa-bars"></i>
+</button>
+
+<button onclick="window.location.reload()">
+<i class="fa-solid fa-house"></i>
+</button>
+
+<button onclick="showContent('contact')">
+<i class="fa-solid fa-phone"></i>
+</button>
 
 </div>
-/* الخلفية */
-.hero{
-position:relative;
-width:100%;
-height:100vh;
-background:url("profile.jpg") center center/cover no-repeat;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-/* طبقة شفافة */
-.overlay{
-position:absolute;
-inset:0;
-background:rgba(0,0,0,.45);
-backdrop-filter:blur(2px);
-}
-
-/* Navbar */
-
-nav{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-padding:25px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:20;
-}
-
-.logo{
-font-size:28px;
-font-weight:bold;
-letter-spacing:3px;
-color:#fff;
-}
-
-.nav-buttons button{
-width:55px;
-height:55px;
-border-radius:50%;
-border:none;
-margin-left:15px;
-font-size:20px;
-cursor:pointer;
-background:rgba(255,255,255,.12);
-backdrop-filter:blur(15px);
-color:#fff;
-transition:.4s;
-}
-
-.nav-buttons button:hover{
-background:#00c6ff;
-transform:translateY(-5px);
-box-shadow:0 0 25px #00c6ff;
-}
-
-/* Sidebar */
-
-#sidebar{
-
-position:fixed;
-top:0;
-right:-340px;
-width:320px;
-height:100%;
-background:rgba(20,20,20,.95);
-backdrop-filter:blur(20px);
-transition:.5s;
-padding:30px;
-z-index:1000;
-overflow:auto;
-
-}
-
-#sidebar.active{
-right:0;
-}
-
-#sidebar h2{
-
-color:#00c6ff;
-margin-bottom:30px;
-
-}
-
-#sidebar button{
-
-width:100%;
-padding:16px;
-margin:10px 0;
-border:none;
-border-radius:12px;
-background:rgba(255,255,255,.08);
-color:white;
-font-size:17px;
-cursor:pointer;
-transition:.4s;
-text-align:left;
 
-}
+</nav>
 
-#sidebar button:hover{
+<!-- Sidebar -->
 
-background:#00c6ff;
-padding-left:25px;
+<div id="sidebar">
 
-}
+<h2>القائمة</h2>
 
-/* النص */
+<button onclick="showContent('about')">📄 النبذة التعريفية</button>
 
-.welcome{
+<button onclick="showContent('qualification')">🎓 المؤهلات العلمية</button>
 
-position:relative;
-z-index:10;
-text-align:center;
-color:white;
+<button onclick="showContent('skills')">💼 المهارات الاحترافية</button>
 
-}
+<button onclick="showContent('languages')">🌍 اللغات</button>
 
-.welcome h1{
+<button onclick="showContent('hobbies')">📚 الهوايات</button>
 
-font-size:65px;
-font-weight:700;
-animation:fade 1.5s;
+<button onclick="showContent('extra')">⭐ لمحة إضافية</button>
 
-}
+<button onclick="showContent('contact')">📞 معلومات الاتصال</button>
 
-.welcome span{
+</div>
 
-color:#00c6ff;
+<!-- Main -->
 
-}
+<div class="content">
 
-.welcome h2{
+<h1>
+Welcome To
+</h1>
 
-margin-top:15px;
-font-size:28px;
-font-weight:300;
-letter-spacing:2px;
-animation:fade 2s;
+<h2>
+Abdallah Elshahat Portfolio
+</h2>
 
-}
+<h3>
+Purchasing Officer
+</h3>
 
-/* Buttons */
+<div class="buttons">
 
-.main-buttons{
+<button onclick="showContent('about')">
+النبذة التعريفية
+</button>
 
-margin-top:45px;
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:18px;
+<button onclick="showContent('qualification')">
+المؤهلات العلمية
+</button>
 
-}
+<button onclick="showContent('skills')">
+المهارات الاحترافية
+</button>
 
-.main-buttons button{
+<button onclick="showContent('languages')">
+اللغات
+</button>
 
-padding:15px 28px;
-border:none;
-border-radius:40px;
-cursor:pointer;
-font-size:17px;
-background:rgba(255,255,255,.12);
-backdrop-filter:blur(15px);
-color:white;
-transition:.4s;
+<button onclick="showContent('hobbies')">
+الهوايات
+</button>
 
-}
+<button onclick="showContent('extra')">
+لمحة إضافية
+</button>
 
-.main-buttons button:hover{
+<button onclick="showContent('contact')">
+معلومات الاتصال
+</button>
 
-background:#00c6ff;
-transform:scale(1.08);
-box-shadow:0 0 25px #00c6ff;
+</div>
 
-}
+</div>
 
-/* Popup */
+</div>
 
-#popup{
+<!-- Popup -->
 
-display:none;
-justify-content:center;
-align-items:center;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.75);
-backdrop-filter:blur(8px);
-z-index:3000;
+<div id="popup">
 
-}
+<div class="popup-box">
 
-.popup-box{
+<span class="close"
+onclick="closePopup()">
 
-width:80%;
-max-width:850px;
-max-height:80vh;
-overflow:auto;
-padding:35px;
-border-radius:20px;
-background:rgba(255,255,255,.1);
-backdrop-filter:blur(20px);
-color:white;
-animation:zoom .4s;
+&times;
 
-}
+</span>
 
-.popup-box h2{
+<div id="popup-content">
 
-margin-bottom:20px;
-color:#00c6ff;
+</div>
 
-}
+</div>
 
-.popup-box ul{
+</div>
 
-padding-left:25px;
+<script src="script.js"></script>
 
-}
-
-.popup-box li{
-
-margin:10px 0;
-
-}
-
-.close{
-
-float:right;
-font-size:35px;
-cursor:pointer;
-color:white;
-
-}
-
-.close:hover{
-
-color:#00c6ff;
-
-}
-
-/* Animations */
-
-@keyframes fade{
-
-from{
-opacity:0;
-transform:translateY(40px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-@keyframes zoom{
-
-from{
-opacity:0;
-transform:scale(.7);
-}
-
-to{
-opacity:1;
-transform:scale(1);
-}
-
-}
-
-/* Mobile */
-
-@media(max-width:768px){
-
-nav{
-
-padding:20px;
-
-}
-
-.logo{
-
-font-size:20px;
-
-}
-
-.welcome h1{
-
-font-size:40px;
-
-}
-
-.welcome h2{
-
-font-size:20px;
-
-}
-
-.main-buttons{
-
-padding:0 20px;
-
-}
-
-.popup-box{
-
-width:92%;
-
-}
-
-}
+</body>
+</html>
