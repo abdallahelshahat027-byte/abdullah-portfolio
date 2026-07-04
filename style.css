@@ -31,15 +31,49 @@ backdrop-filter:blur(2px);
 }
 
 nav{
-position:absolute;
+position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:20px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-z-index:100;
+padding:20px 40px;
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(15px);
+z-index:999;
+}
+
+.logo{
+color:#fff;
+font-size:30px;
+font-weight:700;
+letter-spacing:2px;
+}
+
+.top-buttons{
+display:flex;
+gap:15px;
+align-items:center;
+}
+
+.top-buttons button{
+padding:12px 22px;
+border:none;
+border-radius:30px;
+background:rgba(255,255,255,.15);
+color:#fff;
+cursor:pointer;
+font-size:16px;
+font-weight:bold;
+transition:.3s;
+backdrop-filter:blur(15px);
+}
+
+.top-buttons button:hover{
+background:#00c6ff;
+transform:translateY(-3px);
+box-shadow:0 0 20px #00c6ff;
 }
 
 .logo{
