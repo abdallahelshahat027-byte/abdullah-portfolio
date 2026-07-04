@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+/* 🔥 Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* 🔥 Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 400px;
+}
+
+.hero-img img {
+  width: 250px;
+  border-radius: 20px;
+}
+
+/* 🔥 Buttons */
+.btn {
+  background: linear-gradient(45deg, #7b2ff7, #f107a3);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.big {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+}
+
+/* 🔥 Sections */
+section {
+  padding: 40px;
+  text-align: center;
+}
+
+/* 🔥 Cards */
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
