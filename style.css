@@ -1,4 +1,12 @@
-body {
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.profile-container img:hover {
+  animation: pulse 1s infinite;
+}body {
   margin: 0;
   font-family: Arial;
   background: linear-gradient(135deg, #0f172a, #1e293b);
