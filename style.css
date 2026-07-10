@@ -485,6 +485,51 @@ border-radius:10px;
 .section{
 padding:60px 20px;
 }
+    /* Animation */
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* Light Mode */
+
+body.light{
+
+background:#f5f5f5;
+
+color:#111;
+
+}
+
+body.light .card,
+body.light .fact-card,
+body.light .timeline-item{
+
+background:white;
+
+color:#222;
+
+}
+
+body.light .section{
+
+background:#f5f5f5;
+
+}
 
 .section h2{
 font-size:30px;
