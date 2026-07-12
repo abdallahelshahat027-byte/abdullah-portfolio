@@ -117,11 +117,34 @@ body{
 
 
 header{
-
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:2000;
     display:flex;
-    justify-content:flex-end;
-    gap:15px;
-    padding:10px;
+    gap:10px;
+}
+
+
+header button{
+
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:none;
+    cursor:pointer;
+    background:#0b1d3a;
+    color:white;
+    font-size:20px;
+
+}
+
+
+header button:hover{
+
+    background:#d4af37;
+
+}
 
 }
 
