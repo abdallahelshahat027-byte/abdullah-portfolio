@@ -1136,7 +1136,4 @@ footer {
     transform: translateY(0);
   }
 }
-.section:not(#home) {
-#popup {
-  display: none !important;
-}
+.
