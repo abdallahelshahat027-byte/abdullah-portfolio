@@ -1,138 +1,209 @@
 // =========================
-// POPUP SYSTEM
+// فتح وإغلاق الصناديق
 // =========================
 
-const popup = document.getElementById("popup");
-const popupText = document.getElementById("popupText");
+function toggleContent(id){
 
-let currentLang = "ar";
+    let box = document.getElementById(id);
 
-const content = {
+    if(box.style.display === "block"){
 
-exp: {
-ar: `مسؤول مشتريات | بوابة السيارة
-• تحقيق وفورات 12%
-• إدارة Odoo و Zoho
-• تقليل العجز لأقل من 2%
+        box.style.display = "none";
 
-مسؤول مشتريات | النجم الذهبي
-• تطوير الموردين
-• تحسين العقود
-• تقليل التكاليف`,
-en: `Procurement Officer | Car Gate
-• Achieved 12% savings
-• Managed Odoo & Zoho ERP
-• Reduced shortage below 2%
+    }else{
 
-Procurement Officer | Golden Star
-• Supplier development
-• Contract optimization
-• Cost reduction`
-},
+        box.style.display = "block";
 
-vision: {
-ar: `العقود أداة لحماية الشركة وتقليل المخاطر.
-الموردين شركاء نجاح.`,
-en: `Contracts protect the company and reduce risks.
-Suppliers are success partners.`
-},
+        box.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
 
-philosophy: {
-ar: `أعتمد على TCO وليس السعر فقط.`,
-en: `I focus on total cost of ownership (TCO), not just price.`
-},
+    }
 
-skills: {
-ar: `ERP - تفاوض - تحليل بيانات - إدارة مخزون`,
-en: `ERP - Negotiation - Data Analysis - Inventory Management`
-},
-
-edu: {
-ar: `حقوق - جامعة الزقازيق
-دبلومة قانونية`,
-en: `Law - Zagazig University
-Legal Diploma`
-},
-
-lang: {
-ar: `عربي - إنجليزي`,
-en: `Arabic - English`
-},
-
-hobbies: {
-ar: `قراءة - تعلم - تكنولوجيا`,
-en: `Reading - Learning - Technology`
-},
-
-challenge: {
-ar: `حل أزمة نقص خامات وتقليل زمن التوريد 30%`,
-en: `Solved material shortage crisis and reduced lead time by 30%`
-},
-
-kpi: {
-ar: `خفض التكاليف 15% - دقة مخزون 98%`,
-en: `Reduced cost by 15% - Inventory accuracy 98%`
-},
-
-contact: {
-ar: `الرياض - السعودية
-0565120349
-Abdallahelshahat027@gmail.com`,
-en: `Riyadh - Saudi Arabia
-0565120349
-Abdallahelshahat027@gmail.com`
 }
 
-};
 
 // =========================
-// OPEN POPUP
+// الوضع الليلي
 // =========================
 
-function openBox(type){
-  popup.style.display = "flex";
+const darkBtn = document.getElementById("darkMode");
 
-  if(content[type]){
-    popupText.innerText = content[type][currentLang];
-  }else{
-    popupText.innerText = "No Data";
-  }
+
+darkBtn.addEventListener("click",()=>{
+
+    document.body.classList.toggle("dark");
+
+
+    if(document.body.classList.contains("dark")){
+
+        darkBtn.innerHTML="☀️";
+
+    }else{
+
+        darkBtn.innerHTML="🌙";
+
+    }
+
+});
+
+
+
+// =========================
+// زر الرجوع للأعلى
+// =========================
+
+
+const topBtn = document.getElementById("topBtn");
+
+
+window.addEventListener("scroll",()=>{
+
+
+    if(window.scrollY > 400){
+
+        topBtn.style.display="block";
+
+    }else{
+
+        topBtn.style.display="none";
+
+    }
+
+
+});
+
+
+topBtn.addEventListener("click",()=>{
+
+
+    window.scrollTo({
+
+        top:0,
+        behavior:"smooth"
+
+    });
+
+
+});
+// =========================
+// الترجمة عربي / English
+// =========================
+
+
+const translateBtn = document.getElementById("translateBtn");
+
+let englishMode = false;
+
+
+translateBtn.addEventListener("click",()=>{
+
+
+    englishMode = !englishMode;
+
+
+    if(englishMode){
+
+
+        document.documentElement.lang="en";
+
+        document.documentElement.dir="ltr";
+
+
+        translateBtn.innerHTML="🌐 English | العربية";
+
+
+        changeLanguage("en");
+
+
+    }else{
+
+
+        document.documentElement.lang="ar";
+
+        document.documentElement.dir="rtl";
+
+
+        translateBtn.innerHTML="🌐 العربية | English";
+
+
+        changeLanguage("ar");
+
+
+    }
+
+
+});
+
+
+
+// =========================
+// تغيير النصوص
+// =========================
+
+
+function changeLanguage(lang){
+
+
+
+if(lang==="en"){
+
+
+document.querySelector(".profile-side h2").innerHTML="Abdallah Elshahat";
+
+
+document.querySelector(".profile-side p").innerHTML="Procurement Officer";
+
+
+document.querySelector(".profile-card h1").innerHTML="Abdallah Elshahat";
+
+
+document.querySelector(".profile-card h3").innerHTML="Procurement Officer";
+
+
+
+let links = document.querySelectorAll(".sidebar nav a");
+
+
+let englishLinks=[
+
+"Home",
+"About Me",
+"Experience",
+"Professional Vision",
+"Procurement Philosophy",
+"Skills",
+"Education",
+"Languages",
+"Hobbies",
+"Challenges",
+"KPIs",
+"Contact"
+
+];
+
+
+links.forEach((link,index)=>{
+
+
+let icon = link.querySelector("i").outerHTML;
+
+link.innerHTML = icon + " " + englishLinks[index];
+
+
+});
+
+
+
 }
 
-// =========================
-// CLOSE POPUP
-// =========================
+else{
 
-function closeBox(){
-  popup.style.display = "none";
+
+location.reload();
+
 }
 
-// =========================
-// CLOSE ON OUTSIDE CLICK
-// =========================
 
-window.onclick = function(e){
-  if(e.target === popup){
-    closeBox();
-  }
-};
-
-// =========================
-// LANGUAGE SWITCH
-// =========================
-
-const langBtn = document.getElementById("langToggle");
-
-langBtn.onclick = () => {
-
-  currentLang = currentLang === "ar" ? "en" : "ar";
-
-  // تغيير النصوص
-  document.querySelectorAll("[data-ar]").forEach(el=>{
-    el.innerText = el.getAttribute("data-" + currentLang);
-  });
-
-  // تغيير زر اللغة
-  langBtn.innerText = currentLang === "ar" ? "EN" : "AR";
-
-};
+}
