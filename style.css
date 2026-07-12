@@ -1136,3 +1136,6 @@ footer {
     transform: translateY(0);
   }
 }
+.section:not(#home) {
+    display: none !important;
+}
