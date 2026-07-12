@@ -1,1105 +1,117 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Abdallah Elshahat | Procurement Officer</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<title>Portfolio | Abdallah</title>
 
 <link rel="stylesheet" href="style.css">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
+<body>
 
-<body
-  <div id="popup" class="popup">
-  <div class="popup-box">
-    <span class="close-btn" onclick="closePopup()">×</span>
-    <div id="popupContent"></div>
-  </div>
-</div>
-
-<div id="progress-bar"></div>
-
-<button id="translateBtn">
-<i class="fa-solid fa-language"></i>
-English
-</button>
-
-<button id="scrollTop">
-<i class="fa-solid fa-arrow-up"></i>
-</button>
-
-<!-- Sidebar -->
+<button id="langToggle">EN</button>
 
 <div class="sidebar">
-
-<div class="logo">
-<i class="fa-solid fa-briefcase"></i>
-<span>Portfolio</span>
+  <a href="#exp"><i class="fa fa-briefcase"></i></a>
+  <a href="#vision"><i class="fa fa-eye"></i></a>
+  <a href="#philosophy"><i class="fa fa-lightbulb"></i></a>
+  <a href="#skills"><i class="fa fa-cogs"></i></a>
+  <a href="#edu"><i class="fa fa-graduation-cap"></i></a>
+  <a href="#kpi"><i class="fa fa-chart-line"></i></a>
 </div>
 
-<ul>
+<div class="header">
+  <img src="profile.jpg" class="profile">
 
-<li>
-<a href="#home">
-<i class="fa-solid fa-house"></i>
-الرئيسية
-</a>
-</li>
-
-<li>
-<a href="#about">
-<i class="fa-solid fa-user"></i>
-نبذة عني
-</a>
-</li>
-
-<li>
-<a href="#experience">
-<i class="fa-solid fa-building"></i>
-الخبرات
-</a>
-</li>
-
-<li>
-<a href="#vision">
-<i class="fa-solid fa-lightbulb"></i>
-الرؤية
-</a>
-</li>
-
-<li>
-<a href="#philosophy">
-<i class="fa-solid fa-scale-balanced"></i>
-فلسفة الشراء
-</a>
-</li>
-
-<li>
-<a href="#skills">
-<i class="fa-solid fa-laptop-code"></i>
-المهارات
-</a>
-</li>
-
-<li>
-<a href="#courses">
-<i class="fa-solid fa-graduation-cap"></i>
-الدورات
-</a>
-</li>
-
-<li>
-<a href="#languages">
-<i class="fa-solid fa-earth-americas"></i>
-اللغات
-</a>
-</li>
-
-<li>
-<a href="#hobbies">
-<i class="fa-solid fa-heart"></i>
-الهوايات
-</a>
-</li>
-
-<li>
-<a href="#challenges">
-<i class="fa-solid fa-fire"></i>
-التحديات
-</a>
-</li>
-
-<li>
-<a href="#kpi">
-<i class="fa-solid fa-chart-line"></i>
-KPIs
-</a>
-</li>
-
-<li>
-<a href="#contact">
-<i class="fa-solid fa-phone"></i>
-التواصل
-</a>
-</li>
-
-</ul>
-
+  <h1 data-ar="عبد الله شحات" data-en="Abdallah Elshahat">عبد الله شحات</h1>
+  <h3 data-ar="مسؤول مشتريات" data-en="Procurement Officer">مسؤول مشتريات</h3>
 </div>
 
-<div class="content">
-
-<section id="home" class="hero">
-
-<div class="photo-frame">
-<img src="profile.jpg" alt="عبد الله الشحات">
-
-<h1>
-عبد الله الشحات
-</h1>
-
-<h2>
-Procurement Officer
-</h2>
-
-<p class="summary">
-
-مسؤول مشتريات استراتيجي بخبرة عملية مثبتة في إدارة المشتريات، والتفاوض التعاقدي، وتحسين التكاليف، مع خلفية قانونية قوية تمكنني من حماية مصالح الشركة وتحقيق أعلى كفاءة تشغيلية.
-
+<div class="about">
+<p data-ar="مسؤول مشتريات استراتيجي بخبرة عملية مثبتة في إدارة المشتريات، التفاوض التعاقدي، وتحسين التكاليف."
+   data-en="Strategic procurement officer with proven experience in procurement, negotiation, and cost optimization.">
+مسؤول مشتريات استراتيجي بخبرة عملية مثبتة في إدارة المشتريات، التفاوض التعاقدي، وتحسين التكاليف.
 </p>
+</div>
 
 <div class="buttons">
 
-<button onclick="openSection('experience')">
-
-<i class="fa-solid fa-building"></i>
-
-الخبرات
-
-</button>
-
-<button onclick="openSection('vision')">
-
-<i class="fa-solid fa-lightbulb"></i>
-
-الرؤية
-
-</button>
-
-<button onclick="openSection('philosophy')">
-
-<i class="fa-solid fa-scale-balanced"></i>
-
-فلسفة الشراء
-
-</button>
-
-<button onclick="openSection('skills')">
-
-<i class="fa-solid fa-laptop-code"></i>
-
-المهارات
-
-</button>
-
-<button onclick="openSection('courses')">
-
-<i class="fa-solid fa-graduation-cap"></i>
-
-الدورات
-
-</button>
-
-<button onclick="openSection('languages')">
-
-<i class="fa-solid fa-earth-americas"></i>
-
-اللغات
-
-</button>
-
-<button onclick="openSection('hobbies')">
-
-<i class="fa-solid fa-heart"></i>
-
-الهوايات
-
-</button>
-
-<button onclick="openSection('challenges')">
-
-<i class="fa-solid fa-fire"></i>
-
-التحديات
-
-</button>
-
-<button onclick="openSection('kpi')">
-
-<i class="fa-solid fa-chart-line"></i>
-
-KPIs
-
-</button>
-
-<button onclick="openSection('contact')">
-
-<i class="fa-solid fa-phone"></i>
-
-التواصل
-
-</button>
+<button onclick="openBox('exp')">💼 الخبرات</button>
+<button onclick="openBox('vision')">👁 الرؤية</button>
+<button onclick="openBox('philosophy')">💡 الفلسفة</button>
+<button onclick="openBox('skills')">⚙ المهارات</button>
+<button onclick="openBox('edu')">🎓 المؤهلات</button>
+<button onclick="openBox('lang')">🌍 اللغات</button>
+<button onclick="openBox('hobbies')">🎯 الهوايات</button>
+<button onclick="openBox('challenge')">🔥 التحديات</button>
+<button onclick="openBox('kpi')">📊 KPIs</button>
+<button onclick="openBox('contact')">📞 تواصل</button>
 
 </div>
 
-</section>
-<!-- ========================= -->
-<!-- About Section -->
-<!-- ========================= -->
-
-<section id="about" class="section reveal">
-
-<div class="section-title">
-
-<i class="fa-solid fa-user"></i>
-
-<h2>نبذة مختصرة عني</h2>
-
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closeBox()">✖</span>
+    <div id="popupText"></div>
+  </div>
 </div>
 
-<div class="card">
+<div class="sections">
 
+<section id="exp">
+<h2>💼 الخبرات العملية</h2>
 <p>
+مسؤول مشتريات | شركة بوابة السيارة (2025 - الآن)<br>
+• وفورات 12%<br>
+• إدارة ERP<br>
+• تقليل العجز<br><br>
 
-مسؤول مشتريات استراتيجي بخبرة عملية مثبتة في إدارة المشتريات، التفاوض التعاقدي، وتحسين التكاليف. أمتلك خلفية قانونية قوية تمنحني ميزة تحليلية في إدارة العقود والمخاطر، مع إتقان استخدام أنظمة ERP وتحليل البيانات لاتخاذ قرارات دقيقة تدعم أهداف الشركة.
-
+مسؤول مشتريات | النجم الذهبي (2023 - 2024)<br>
+• تطوير الموردين<br>
+• تحسين التدفق النقدي
 </p>
-
-<p>
-
-أؤمن بأن إدارة المشتريات ليست مجرد إصدار أوامر شراء، بل هي عملية استراتيجية تهدف إلى تعظيم القيمة، وتقليل المخاطر، وبناء علاقات طويلة الأمد مع الموردين لتحقيق النمو المستدام.
-
-</p>
-
-</div>
-
 </section>
 
-<!-- ========================= -->
-<!-- Experience Section -->
-<!-- ========================= -->
-
-<section id="experience" class="section reveal">
-
-<div class="section-title">
-
-<i class="fa-solid fa-building"></i>
-
-<h2>الخبرات العملية</h2>
-
-</div>
-
-<div class="card experience-card">
-
-<h3>
-
-<i class="fa-solid fa-briefcase"></i>
-
-مسؤول مشتريات | شركة بوابة السيارة
-
-</h3>
-
-<span class="date">
-
-يناير 2025 - حتى الآن
-
-</span>
-
-<ul>
-
-<li>تحقيق وفورات استراتيجية في تكاليف الشراء بنسبة 12% عبر تحسين دورة الشراء وتفعيل اتفاقيات الإطار.</li>
-
-<li>إدارة عمليات التوريد باستخدام Odoo ERP و Zoho ERP.</li>
-
-<li>خفض نسبة Stock-out إلى أقل من 2%.</li>
-
-<li>إدارة العقود والتفاوض مع الموردين.</li>
-
-<li>حل النزاعات التعاقدية وتقليل المخاطر القانونية.</li>
-
-<li>تحسين دورة الفوترة بالتنسيق مع المالية والمخازن.</li>
-
-</ul>
-
-</div>
-
-<div class="card experience-card">
-
-<h3>
-
-<i class="fa-solid fa-building-columns"></i>
-
-مسؤول مشتريات | مجموعة شركات النجم الذهبي
-
-</h3>
-
-<span class="date">
-
-يناير 2023 - ديسمبر 2024
-
-</span>
-
-<ul>
-
-<li>إعادة هيكلة قاعدة بيانات الموردين.</li>
-
-<li>تقييم الموردين بشكل دوري.</li>
-
-<li>تحسين شروط الدفع.</li>
-
-<li>التفاوض على العقود التجارية.</li>
-
-<li>مطابقة 100% للمواصفات الفنية.</li>
-
-<li>خفض تكاليف الشراء دون التأثير على الجودة.</li>
-
-</ul>
-
-</div>
-
+<section id="vision">
+<h2>👁 الرؤية المهنية</h2>
+<p>العقود لحماية الشركة وتقليل المخاطر، والموردين شركاء نجاح.</p>
 </section>
 
-<!-- ========================= -->
-<!-- Vision -->
-<!-- ========================= -->
-
-<section id="vision" class="section reveal">
-
-<div class="section-title">
-
-<i class="fa-solid fa-lightbulb"></i>
-
-<h2>رؤيتي المهنية</h2>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-<i class="fa-solid fa-scale-balanced"></i>
-
-الجانب القانوني في المشتريات
-
-</h3>
-
-<p>
-
-بفضل خلفيتي القانونية، أرى العقود ليس كأوراق روتينية، بل كوسيلة لحماية الشركة وتقليل المخاطر. أركز على صياغة بنود التوريد المتأخر والجودة المشروطة لضمان حقوق الشركة.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-<i class="fa-solid fa-handshake"></i>
-
-إدارة علاقات الموردين
-
-</h3>
-
-<p>
-
-لا أتعامل مع الموردين كبائعين فقط، بل كشركاء نجاح استراتيجيين. العلاقة المبنية على الشفافية والاحترام تحقق أسعارًا أفضل وأولوية في التوريد وقت الأزمات.
-
-</p>
-
-</div>
-
-</section>
-<!-- ========================= -->
-<!-- Procurement Philosophy -->
-<!-- ========================= -->
-
-<section id="philosophy" class="section reveal">
-
-<div class="section-title">
-
-<i class="fa-solid fa-scale-balanced"></i>
-
-<h2>فلسفة الشراء</h2>
-
-</div>
-
-<div class="card">
-
-<p>
-
-أتبنى في إدارتي للمشتريات منهجية
-<strong>Total Cost of Ownership (TCO)</strong>
-ولا يقتصر تركيزي على سعر الشراء فقط، بل على القيمة التشغيلية الكاملة التي يقدمها المورد، مثل الجودة، وتكاليف الصيانة، وسرعة التوريد، واستمرارية الخدمة.
-
-</p>
-
-<p>
-
-أؤمن بأن المورد ليس مجرد جهة خارجية، بل شريك نجاح استراتيجي، لذلك أركز على بناء علاقات طويلة الأمد قائمة على الثقة والشفافية وتحقيق المنفعة المشتركة.
-
-</p>
-
-</div>
-
+<section id="philosophy">
+<h2>💡 فلسفة الشراء</h2>
+<p>التركيز على التكلفة الكلية (TCO) وليس السعر فقط.</p>
 </section>
 
-<!-- ========================= -->
-<!-- Skills -->
-<!-- ========================= -->
-
-<section id="skills" class="section reveal">
-
-<div class="section-title">
-
-<i class="fa-solid fa-laptop-code"></i>
-
-<h2>المهارات التقنية والبرمجية</h2>
-
-</div>
-
-<div class="cards-grid">
-
-<div class="mini-card">
-
-<i class="fa-solid fa-database"></i>
-
-<h3>ERP Systems</h3>
-
-<p>
-
-Odoo ERP
-
-<br>
-
-Zoho ERP
-
-</p>
-
-</div>
-
-<div class="mini-card">
-
-<i class="fa-solid fa-file-contract"></i>
-
-<h3>إدارة العقود</h3>
-
-<p>
-
-صياغة العقود
-
-<br>
-
-التفاوض
-
-<br>
-
-المراجعة القانونية
-
-</p>
-
-</div>
-
-<div class="mini-card">
-
-<i class="fa-solid fa-chart-column"></i>
-
-<h3>تحليل البيانات</h3>
-
-<p>
-
-Excel
-
-<br>
-
-Power BI
-
-<br>
-
-Data Analysis
-
-</p>
-
-</div>
-
-<div class="mini-card">
-
-<i class="fa-solid fa-boxes-stacked"></i>
-
-<h3>إدارة المخزون</h3>
-
-<p>
-
-Inventory Control
-
-<br>
-
-Forecasting
-
-<br>
-
-Stock Management
-
-</p>
-
-</div>
-
-<div class="mini-card">
-
-<i class="fa-solid fa-money-bill-trend-up"></i>
-
-<h3>Cost Analysis</h3>
-
-<p>
-
-Cost Saving
-
-<br>
-
-ROI
-
-<br>
-
-TCO
-
-</p>
-
-</div>
-
-<div class="mini-card">
-
-<i class="fa-solid fa-users"></i>
-
-<h3>Supplier Management</h3>
-
-<p>
-
-Supplier Evaluation
-
-<br>
-
-Vendor Scorecard
-
-<br>
-
-SRM
-
-</p>
-
-</div>
-
-</div>
-
+<section id="skills">
+<h2>⚙ المهارات</h2>
+<p>ERP - تحليل بيانات - تفاوض - إدارة مخزون</p>
 </section>
 
-<!-- ========================= -->
-<!-- Courses -->
-<!-- ========================= -->
-
-<section id="courses" class="section reveal">
-
-<div class="section-title">
-
-<i class="fa-solid fa-graduation-cap"></i>
-
-<h2>الدورات التدريبية والمؤهلات</h2>
-
-</div>
-
-<div class="card">
-
-<ul>
-
-<li>
-
-🎓 أساسيات المشتريات وسلاسل الإمداد.
-
-</li>
-
-<li>
-
-⚖️ دبلومة الإدارة القانونية للشركات.
-
-نقابة المحامين بالشرقية
-
-2022
-
-</li>
-
-<li>
-
-📚 ليسانس الحقوق.
-
-جامعة الزقازيق
-
-2021
-
-</li>
-
-</ul>
-
-</div>
-
+<section id="edu">
+<h2>🎓 المؤهلات</h2>
+<p>ليسانس حقوق + دبلومة قانونية</p>
 </section>
 
-<!-- ========================= -->
-<!-- Languages -->
-<!-- ========================= -->
-
-<section id="languages" class="section reveal">
-
-<div class="section-title">
-
-<i class="fa-solid fa-earth-americas"></i>
-
-<h2>اللغات</h2>
-
-</div>
-
-<div class="cards-grid">
-
-<div class="mini-card">
-
-🇪🇬
-
-<h3>العربية</h3>
-
-<p>
-
-اللغة الأم
-
-</p>
-
-</div>
-
-<div class="mini-card">
-
-🇬🇧
-
-<h3>English</h3>
-
-<p>
-
-Professional Level
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-<!-- ========================= -->
-<!-- Hobbies -->
-<!-- ========================= -->
-
-<section id="hobbies" class="section reveal">
-
-<div class="section-title">
-
-<i class="fa-solid fa-heart"></i>
-
-<h2>الهوايات</h2>
-
-</div>
-
-<div class="cards-grid">
-
-<div class="mini-card">
-<i class="fa-solid fa-book-open"></i>
-<h3>القراءة</h3>
-<p>الاطلاع على كتب الإدارة، التفاوض، وسلاسل الإمداد.</p>
-</div>
-
-<div class="mini-card">
-<i class="fa-solid fa-laptop"></i>
-<h3>التعليم المستمر</h3>
-<p>تطوير المهارات المهنية ومتابعة أحدث الممارسات العالمية.</p>
-</div>
-
-<div class="mini-card">
-<i class="fa-solid fa-microchip"></i>
-<h3>التكنولوجيا</h3>
-<p>متابعة أنظمة ERP والذكاء الاصطناعي والتحول الرقمي.</p>
-</div>
-
-<div class="mini-card">
-<i class="fa-solid fa-chart-line"></i>
-<h3>تحليل الأسواق</h3>
-<p>متابعة أسعار المواد الخام وتحليل اتجاهات السوق.</p>
-</div>
-
-</div>
-
+<section id="kpi">
+<h2>📊 KPIs</h2>
+<p>خفض التكاليف 15% - دقة مخزون 98%</p>
 </section>
 
-<!-- ========================= -->
-<!-- Challenges -->
-<!-- ========================= -->
-
-<section id="challenges" class="section reveal">
-
-<div class="section-title">
-
-<i class="fa-solid fa-fire"></i>
-
-<h2>التحديات والإنجازات</h2>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-<i class="fa-solid fa-industry"></i>
-
-شركة بوابة السيارة
-
-</h3>
-
-<h4>التحدي</h4>
-
+<section id="contact">
+<h2>📞 التواصل</h2>
 <p>
-
-نقص في المواد الخام أدى إلى توقف جزئي في خطوط الإنتاج.
-
-</p>
-
-<h4>الإجراء</h4>
-
-<ul>
-
-<li>إعادة تقييم الموردين الحاليين.</li>
-
-<li>إعداد نظام Inventory Forecasting.</li>
-
-<li>إضافة موردين احتياطيين.</li>
-
-<li>تطوير خطة شراء استباقية.</li>
-
-</ul>
-
-<h4>النتيجة</h4>
-
-<ul>
-
-<li>تقليل Lead Time بنسبة 30%.</li>
-
-<li>استمرار الإنتاج بنسبة 100%.</li>
-
-<li>خفض حالات Stock-out إلى أقل من 2%.</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-<i class="fa-solid fa-building"></i>
-
-مجموعة شركات النجم الذهبي
-
-</h3>
-
-<h4>التحدي</h4>
-
-<p>
-
-وجود تفاوت في جودة المواد بين الموردين مع تأخر متكرر في مواعيد التسليم، مما أثر على استقرار عمليات الشراء.
-
-</p>
-
-<h4>الإجراء</h4>
-
-<ul>
-
-<li>إنشاء نظام Vendor Scorecard لتقييم الموردين.</li>
-
-<li>تصنيف الموردين حسب الجودة والالتزام.</li>
-
-<li>إعادة التفاوض على العقود.</li>
-
-<li>اعتماد موردين بديلين للمواد الحرجة.</li>
-
-</ul>
-
-<h4>النتيجة</h4>
-
-<ul>
-
-<li>تقليل تأخير التوريد بنسبة 25%.</li>
-
-<li>رفع جودة المواد المستلمة إلى أكثر من 99%.</li>
-
-<li>تحسين استقرار سلسلة الإمداد وتقليل المخاطر التشغيلية.</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-<i class="fa-solid fa-globe"></i>
-
-الخبرة القطاعية والمهارات التخصصية
-
-</h3>
-
-<ul>
-
-<li>التحول الرقمي باستخدام Odoo ERP وZoho ERP.</li>
-
-<li>صياغة ومراجعة عقود التوريد من منظور قانوني.</li>
-
-<li>تحليل المخاطر ووضع خطط للطوارئ.</li>
-
-<li>إدارة العلاقات الاستراتيجية مع الموردين.</li>
-
-<li>تحسين دورة الشراء ورفع كفاءة العمليات.</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<!-- ========================= -->
-<!-- KPIs -->
-<!-- ========================= -->
-
-<section id="kpi" class="section reveal">
-
-<div class="section-title">
-
-<i class="fa-solid fa-chart-line"></i>
-
-<h2>مؤشرات الأداء الرئيسية (KPIs)</h2>
-
-</div>
-
-<div class="cards-grid">
-
-<div class="mini-card">
-
-<i class="fa-solid fa-sack-dollar"></i>
-
-<h2 class="counter">15%</h2>
-
-<h3>Cost Savings</h3>
-
-<p>
-
-خفض تكاليف المشتريات بنسبة 12–15%.
-
-</p>
-
-</div>
-
-<div class="mini-card">
-
-<i class="fa-solid fa-truck-fast"></i>
-
-<h2 class="counter">25%</h2>
-
-<h3>Lead Time</h3>
-
-<p>
-
-تقليل زمن التوريد بنسبة 25%.
-
-</p>
-
-</div>
-
-<div class="mini-card">
-
-<i class="fa-solid fa-box-open"></i>
-
-<h2 class="counter">98%</h2>
-
-<h3>Inventory Accuracy</h3>
-
-<p>
-
-الحفاظ على دقة المخزون بنسبة تتجاوز 98%.
-
-</p>
-
-</div>
-
-<div class="mini-card">
-
-<i class="fa-solid fa-award"></i>
-
-<h2 class="counter">99%</h2>
-
-<h3>Vendor Quality</h3>
-
-<p>
-
-خفض المرتجعات والمواد التالفة إلى أقل من 1%.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-<!-- ========================= -->
-<!-- Contact -->
-<!-- ========================= -->
-
-<section id="contact" class="section reveal">
-
-<div class="section-title">
-
-<i class="fa-solid fa-phone"></i>
-
-<h2>معلومات التواصل</h2>
-
-</div>
-
-
-<div class="contact-box">
-
-
-<div class="contact-item">
-
-<i class="fa-solid fa-location-dot"></i>
-
-<div>
-
-<h3>الموقع</h3>
-
-<p>
-الرياض، المملكة العربية السعودية
-</p>
-
-</div>
-
-</div>
-
-
-<div class="contact-item">
-
-<i class="fa-solid fa-phone"></i>
-
-<div>
-
-<h3>الهاتف</h3>
-
-<p>
-0565120349
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="contact-item">
-
-<i class="fa-solid fa-envelope"></i>
-
-<div>
-
-<h3>Email</h3>
-
-<p>
+الرياض - السعودية<br>
+0565120349<br>
 Abdallahelshahat027@gmail.com
 </p>
-
-</div>
-
-</div>
-
-
-
-</div>
-
-
 </section>
 
-
-
-<!-- ========================= -->
-<!-- Footer -->
-<!-- ========================= -->
-
-
-<footer>
-
-
-<div class="footer-content">
-
-
-<h2>
-
-عبد الله الشحات
-
-</h2>
-
-
-<p>
-
-Procurement Officer
-
-</p>
-
-
-<div class="social-icons">
-
-
-<a href="#">
-
-<i class="fa-brands fa-linkedin"></i>
-
-</a>
-
-
-<a href="#">
-
-<i class="fa-brands fa-github"></i>
-
-</a>
-
-
-<a href="#">
-
-<i class="fa-solid fa-envelope"></i>
-
-</a>
-
-
 </div>
-
-
-<p class="copyright">
-
-© 2026 Abdallah Elshahat. All Rights Reserved.
-
-</p>
-
-
-</div>
-
-
-</footer>
-
-
-
-</div>
-
 
 <script src="translations.js"></script>
 <script src="script.js"></script>
 
 </body>
-
 </html>
