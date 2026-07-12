@@ -1137,5 +1137,6 @@ footer {
   }
 }
 .section:not(#home) {
-    display: none !important;
+#popup {
+  display: none !important;
 }
