@@ -1,56 +1,138 @@
 // =========================
-// منع أي كود قديم يشتغل
+// POPUP SYSTEM
 // =========================
-document.addEventListener("DOMContentLoaded", function () {
 
-    // =========================
-    // Popup System
-    // =========================
+const popup = document.getElementById("popup");
+const popupText = document.getElementById("popupText");
 
-    window.openSection = function(id){
+let currentLang = "ar";
 
-        let section = document.getElementById(id);
+const content = {
 
-        if(section){
+exp: {
+ar: `مسؤول مشتريات | بوابة السيارة
+• تحقيق وفورات 12%
+• إدارة Odoo و Zoho
+• تقليل العجز لأقل من 2%
 
-            let popup = document.getElementById("popup");
-            let content = document.getElementById("popupContent");
+مسؤول مشتريات | النجم الذهبي
+• تطوير الموردين
+• تحسين العقود
+• تقليل التكاليف`,
+en: `Procurement Officer | Car Gate
+• Achieved 12% savings
+• Managed Odoo & Zoho ERP
+• Reduced shortage below 2%
 
-            // فضي القديم
-            content.innerHTML = "";
+Procurement Officer | Golden Star
+• Supplier development
+• Contract optimization
+• Cost reduction`
+},
 
-            // انسخ المحتوى
-            content.innerHTML = section.innerHTML;
+vision: {
+ar: `العقود أداة لحماية الشركة وتقليل المخاطر.
+الموردين شركاء نجاح.`,
+en: `Contracts protect the company and reduce risks.
+Suppliers are success partners.`
+},
 
-            // افتح البوب
-            popup.style.display = "flex";
-        }
-    }
+philosophy: {
+ar: `أعتمد على TCO وليس السعر فقط.`,
+en: `I focus on total cost of ownership (TCO), not just price.`
+},
 
-    window.closePopup = function(){
-        document.getElementById("popup").style.display = "none";
-    }
+skills: {
+ar: `ERP - تفاوض - تحليل بيانات - إدارة مخزون`,
+en: `ERP - Negotiation - Data Analysis - Inventory Management`
+},
 
-    // =========================
-    // قفل البوب لما تدوس بره
-    // =========================
-    document.addEventListener("click", function(e){
+edu: {
+ar: `حقوق - جامعة الزقازيق
+دبلومة قانونية`,
+en: `Law - Zagazig University
+Legal Diploma`
+},
 
-        let popup = document.getElementById("popup");
+lang: {
+ar: `عربي - إنجليزي`,
+en: `Arabic - English`
+},
 
-        if(e.target === popup){
-            popup.style.display = "none";
-        }
+hobbies: {
+ar: `قراءة - تعلم - تكنولوجيا`,
+en: `Reading - Learning - Technology`
+},
 
-    });
+challenge: {
+ar: `حل أزمة نقص خامات وتقليل زمن التوريد 30%`,
+en: `Solved material shortage crisis and reduced lead time by 30%`
+},
 
-    // =========================
-    // منع أي Sections تظهر لوحدها
-    // =========================
-    let sections = document.querySelectorAll(".section-content");
+kpi: {
+ar: `خفض التكاليف 15% - دقة مخزون 98%`,
+en: `Reduced cost by 15% - Inventory accuracy 98%`
+},
 
-    sections.forEach(sec => {
-        sec.style.display = "none";
-    });
+contact: {
+ar: `الرياض - السعودية
+0565120349
+Abdallahelshahat027@gmail.com`,
+en: `Riyadh - Saudi Arabia
+0565120349
+Abdallahelshahat027@gmail.com`
+}
 
-});
+};
+
+// =========================
+// OPEN POPUP
+// =========================
+
+function openBox(type){
+  popup.style.display = "flex";
+
+  if(content[type]){
+    popupText.innerText = content[type][currentLang];
+  }else{
+    popupText.innerText = "No Data";
+  }
+}
+
+// =========================
+// CLOSE POPUP
+// =========================
+
+function closeBox(){
+  popup.style.display = "none";
+}
+
+// =========================
+// CLOSE ON OUTSIDE CLICK
+// =========================
+
+window.onclick = function(e){
+  if(e.target === popup){
+    closeBox();
+  }
+};
+
+// =========================
+// LANGUAGE SWITCH
+// =========================
+
+const langBtn = document.getElementById("langToggle");
+
+langBtn.onclick = () => {
+
+  currentLang = currentLang === "ar" ? "en" : "ar";
+
+  // تغيير النصوص
+  document.querySelectorAll("[data-ar]").forEach(el=>{
+    el.innerText = el.getAttribute("data-" + currentLang);
+  });
+
+  // تغيير زر اللغة
+  langBtn.innerText = currentLang === "ar" ? "EN" : "AR";
+
+};
