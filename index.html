@@ -1,117 +1,217 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
+
 <head>
-<meta charset="UTF-8">
-<title>Portfolio | Abdallah</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عبد الله شحات | Procurement Officer</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
-<button id="langToggle">EN</button>
+<!-- القائمة الجانبية -->
 
-<div class="sidebar">
-  <a href="#exp"><i class="fa fa-briefcase"></i></a>
-  <a href="#vision"><i class="fa fa-eye"></i></a>
-  <a href="#philosophy"><i class="fa fa-lightbulb"></i></a>
-  <a href="#skills"><i class="fa fa-cogs"></i></a>
-  <a href="#edu"><i class="fa fa-graduation-cap"></i></a>
-  <a href="#kpi"><i class="fa fa-chart-line"></i></a>
+<aside class="sidebar">
+
+<div class="logo">
+<i class="fa-solid fa-user-tie"></i>
+<h2>عبد الله شحات</h2>
+<p>Procurement Officer</p>
 </div>
 
-<div class="header">
-  <img src="profile.jpg" class="profile">
+<ul>
 
-  <h1 data-ar="عبد الله شحات" data-en="Abdallah Elshahat">عبد الله شحات</h1>
-  <h3 data-ar="مسؤول مشتريات" data-en="Procurement Officer">مسؤول مشتريات</h3>
+<li><a href="#about"><i class="fa-solid fa-user"></i> نبذة</a></li>
+
+<li><a href="#experience"><i class="fa-solid fa-briefcase"></i> الخبرات</a></li>
+
+<li><a href="#vision"><i class="fa-solid fa-lightbulb"></i> رؤيتي</a></li>
+
+<li><a href="#philosophy"><i class="fa-solid fa-scale-balanced"></i> فلسفة الشراء</a></li>
+
+<li><a href="#skills"><i class="fa-solid fa-gears"></i> المهارات</a></li>
+
+<li><a href="#education"><i class="fa-solid fa-graduation-cap"></i> المؤهلات</a></li>
+
+<li><a href="#languages"><i class="fa-solid fa-language"></i> اللغات</a></li>
+
+<li><a href="#hobbies"><i class="fa-solid fa-heart"></i> الهوايات</a></li>
+
+<li><a href="#challenge"><i class="fa-solid fa-trophy"></i> التحديات</a></li>
+
+<li><a href="#kpi"><i class="fa-solid fa-chart-line"></i> KPIs</a></li>
+
+<li><a href="#contact"><i class="fa-solid fa-phone"></i> التواصل</a></li>
+
+</ul>
+
+</aside>
+
+<!-- المحتوى -->
+
+<div class="main">
+
+<header>
+
+<div class="translate">
+
+<button id="langBtn">
+🌐 العربية | English
+</button>
+
 </div>
 
-<div class="about">
-<p data-ar="مسؤول مشتريات استراتيجي بخبرة عملية مثبتة في إدارة المشتريات، التفاوض التعاقدي، وتحسين التكاليف."
-   data-en="Strategic procurement officer with proven experience in procurement, negotiation, and cost optimization.">
-مسؤول مشتريات استراتيجي بخبرة عملية مثبتة في إدارة المشتريات، التفاوض التعاقدي، وتحسين التكاليف.
-</p>
-</div>
+</header>
 
-<div class="buttons">
+<!-- الصفحة الرئيسية -->
 
-<button onclick="openBox('exp')">💼 الخبرات</button>
-<button onclick="openBox('vision')">👁 الرؤية</button>
-<button onclick="openBox('philosophy')">💡 الفلسفة</button>
-<button onclick="openBox('skills')">⚙ المهارات</button>
-<button onclick="openBox('edu')">🎓 المؤهلات</button>
-<button onclick="openBox('lang')">🌍 اللغات</button>
-<button onclick="openBox('hobbies')">🎯 الهوايات</button>
-<button onclick="openBox('challenge')">🔥 التحديات</button>
-<button onclick="openBox('kpi')">📊 KPIs</button>
-<button onclick="openBox('contact')">📞 تواصل</button>
+<section class="hero">
+
+<div class="photo">
+
+<img src="images/profile.jpg" alt="عبد الله شحات">
 
 </div>
 
-<div id="popup" class="popup">
-  <div class="popup-content">
-    <span class="close" onclick="closeBox()">✖</span>
-    <div id="popupText"></div>
-  </div>
-</div>
+<h1>عبد الله شحات</h1>
 
-<div class="sections">
+<h2>Procurement Officer</h2>
 
-<section id="exp">
-<h2>💼 الخبرات العملية</h2>
 <p>
-مسؤول مشتريات | شركة بوابة السيارة (2025 - الآن)<br>
-• وفورات 12%<br>
-• إدارة ERP<br>
-• تقليل العجز<br><br>
 
-مسؤول مشتريات | النجم الذهبي (2023 - 2024)<br>
-• تطوير الموردين<br>
-• تحسين التدفق النقدي
+مسؤول مشتريات استراتيجي بخبرة عملية مثبتة في إدارة المشتريات والتفاوض والعقود وإدارة الموردين وتحسين التكاليف.
+
 </p>
+
 </section>
 
-<section id="vision">
-<h2>👁 الرؤية المهنية</h2>
-<p>العقود لحماية الشركة وتقليل المخاطر، والموردين شركاء نجاح.</p>
+<!-- الأزرار -->
+
+<section class="buttons">
+
+<button onclick="toggleBox('box1')">
+💼 الخبرات العملية
+</button>
+
+<button onclick="toggleBox('box2')">
+💡 رؤيتي المهنية
+</button>
+
+<button onclick="toggleBox('box3')">
+📊 فلسفة الشراء
+</button>
+
+<button onclick="toggleBox('box4')">
+⚙ المهارات
+</button>
+
+<button onclick="toggleBox('box5')">
+🎓 المؤهلات
+</button>
+
+<button onclick="toggleBox('box6')">
+🌍 اللغات
+</button>
+
+<button onclick="toggleBox('box7')">
+❤️ الهوايات
+</button>
+
+<button onclick="toggleBox('box8')">
+🚀 التحديات
+</button>
+
+<button onclick="toggleBox('box9')">
+📈 KPIs
+</button>
+
 </section>
 
-<section id="philosophy">
-<h2>💡 فلسفة الشراء</h2>
-<p>التركيز على التكلفة الكلية (TCO) وليس السعر فقط.</p>
-</section>
+<!-- صندوق الخبرات -->
 
-<section id="skills">
-<h2>⚙ المهارات</h2>
-<p>ERP - تحليل بيانات - تفاوض - إدارة مخزون</p>
-</section>
+<div class="content-box" id="box1">
 
-<section id="edu">
-<h2>🎓 المؤهلات</h2>
-<p>ليسانس حقوق + دبلومة قانونية</p>
-</section>
+<h2>💼 الخبرات العملية</h2>
 
-<section id="kpi">
-<h2>📊 KPIs</h2>
-<p>خفض التكاليف 15% - دقة مخزون 98%</p>
+<p>
+مسؤول مشتريات | شركة بوابة السيارة
+</p>
+
+<ul>
+
+<li>تحقيق وفر 12٪ في تكاليف الشراء.</li>
+
+<li>إدارة Odoo ERP و Zoho ERP.</li>
+
+<li>تقليل Stock-out لأقل من 2٪.</li>
+
+<li>إدارة العقود والموردين.</li>
+
+</ul>
+
+<hr>
+
+<p>
+
+مسؤول مشتريات | مجموعة شركات النجم الذهبي
+
+</p>
+
+<ul>
+
+<li>إعادة هيكلة قاعدة الموردين.</li>
+
+<li>تحسين التدفق النقدي.</li>
+
+<li>إدارة أوامر الشراء.</li>
+
+<li>تقليل التكاليف.</li>
+
+</ul>
+
+</div>
+
+<!-- باقي الصناديق سنضيفها في الأجزاء القادمة -->
+
+<section id="about">
+
+<h2>👤 نبذة عني</h2>
+
+<p>
+
+مسؤول مشتريات استراتيجي بخبرة عملية مثبتة في إدارة المشتريات والتفاوض التعاقدي وتحسين التكاليف، مع خلفية قانونية قوية وإجادة أنظمة ERP وتحليل البيانات.
+
+</p>
+
 </section>
 
 <section id="contact">
-<h2>📞 التواصل</h2>
-<p>
-الرياض - السعودية<br>
-0565120349<br>
-Abdallahelshahat027@gmail.com
-</p>
+
+<h2>📞 معلومات التواصل</h2>
+
+<p>📍 الرياض - المملكة العربية السعودية</p>
+
+<p>📱 0565120349</p>
+
+<p>✉️ Abdallahelshahat027@gmail.com</p>
+
 </section>
 
 </div>
 
-<script src="translations.js"></script>
 <script src="script.js"></script>
 
 </body>
+
 </html>
